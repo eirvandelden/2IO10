@@ -1,0 +1,15 @@
+%% Heroefening ``Wat een werk'', Opdracht 9
+
+\item Hoeveel klussen werden er volgens de logfile maximaal tegelijk uitgevoerd? \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+%1:\emph{Antwoord:} $(\uparrow t \in \mathbb{T} : : \#\{ l \in \mathcal{L} : b(l) \leq t \leq e(l) \})$ \\
+%1:\emph{Assessment:} Correct. \\
+
+\emph{Antwoord:} $(\uparrow t \in \mathbb{T} : : \#\{ l \in \mathcal{L} ~|~ b(l) \leq t \leq e(l) \})$ \\
+%\emph{Redenering:} Herformulering om onduidelijkheid te voorkomen \\
+\emph{Assessment:} De eindtijd telt hier ook mee als tijdstip van uitvoering.
+
+\emph{Verbeterd antwoord:} $(\uparrow t \in \mathbb{T} :~: \#\{ l \in \mathcal{L} ~|~ b(l) \leq t < e(l) \})$ \\

@@ -1,0 +1,57 @@
+%% productdocument 1, opgave 6 (Predikaten)
+
+\begin{enumerate}
+
+%%%%% Deelopgave 6.1 %%%%%
+\item Geef de betekenis van de volgende predikaten weer als een Nederlandse zin \ldots
+\begin{enumerate}
+
+    \item $(\forall x,y,z  : xRy\;\land\; xRz : y=z)$ \\
+        \emph{Antwoord:} ``Voor alle voorkomens van \emph{y} en \emph{z} die dezelfde relatie met alle voorkomens van \emph{x} handhaven, geldt dat \emph{y} en \emph{z} gelijk zijn aan elkaar.'' \\
+
+    \item $( \exists a,b,c  : a,b,c \in \mathbb{Z} : a^{n} + b^{n} = c^{n} ) \Rightarrow n\leq 2$ \\
+        \emph{Antwoord:} ``Er bestaan waarden voor \emph{a}, \emph{b} en \emph{c} (uit $\mathbb{Z}$) waarvoor geldt $a^{n} + b^{n} = c^{n} \Rightarrow n \leqslant 2$.'' \\
+        \emph{Verbeterd antwoord:}``Als er waarden zijn voor \emph{a, b} en \emph{c} uit $\mathbb{Z}$ waarbij $a^{n} + b^{n} = c^{n}$, dan is \emph{n} kleiner of gelijk aan 2.'' \\
+        \emph{Redenering:} Het origineel had over het hoofd gezien dat de $\exists$ ophield voor de $\Rightarrow$ en had daardoor een verkeerde interpretatie.\\
+
+    \item $(\uparrow m : m \in M : m)~\mbox{bestaat} \equiv (\exists n  : n \in \mathbb{N} : n\!+\!1 = \# M )$ \\
+        %orig 1: \emph{Antwoord:} ``De maximale waarde van \emph{m} (uit \emph{M}) is gelijkwaardig met de lengte van de rij \emph{M}, waarvan de lengte wordt gedefinieerd als \emph{n} + 1 en \emph{n} $\epsilon$ $\mathbb{N}$.''\\
+        %orig 1: \emph{Verbeterd antwoord:} Wanneer een maximum voor verzameling $M$ bestaat, dan is $M$ geen lege verzameling en vice versa.\\
+        %orig 1: \emph{Redenering:} Het ``bestaat'' was gemist en zorgde voor een verkeerde interpretatie. \\
+        \emph{Antwoord:} ``Wanneer een maximum voor verzameling $M$ bestaat, dan is $M$ geen lege verzameling en vice versa.'' \\
+        \emph{Verbeterd antwoord:} ``Wanneer een maximum voor verzameling $M$ bestaat, dan is $M$ geen lege verzameling en is $M$ eindig door een limiet. Dit geld ook omgekeerd.'' \\
+        \emph{Redenering:} Er werd geen rekening gehouden met een mogelijke afwezigheid van een maximum door oneindigheid d.m.v. naderende limieten. \\
+
+\end{enumerate}
+
+%%%%% Deelopgave 6.2 %%%%%
+\item Geef predikaten voor \ldots
+\begin{enumerate}
+
+    \item een gegeven woord is een palindroom van ten hoogste $13$ letters lang is. \\
+        \emph{Antwoord:} $( \forall ~woord : \#woord \geq 13 \wedge woord \in Palindroom : woord ) $ \\
+        \emph{Verbeterd antwoord:} $\#woord \leq 13 \wedge (\forall i \in \mathbb{N} : 0 \leq i \leq ((\#woord$ div $2) \wedge woord(i)=woord(\#woord-1-i))$ \\
+        \emph{Redenering:} Het begrip Palindroom is nu uitgewerkt, verder is de formule een beetje anders opgezet. \\
+
+    \item als een gegeven woord een palindroom bevat dan heeft dat hoogstens $13$ letters. \footnote{Er zijn meerdere interpretaties mogelijk van deze zin. Wij nemen aan dat gevraagd wordt dat het palindroom hoogstens 13 letters bevat, en niet het woord zelf.} \\
+        %orig 2b \emph{Antwoord:} \textbf{if} $woord \in Palindroom \rightarrow \# woord \leq 13 $ \textbf{fi} \\
+        %orig 2b \emph{Verbeterd antwoord:} $((\forall i \in \mathbb{N} : 0 \leq i < ((\#woord / 2) - 1)) \wedge woord(i)=woord(\#woord-1-i)) \Rightarrow \# woord \leq 13 $ \\
+        %orig 2b \emph{Redenering:} Het begrip ``Palindroom'' is uitgewerkt, verder niets.\\
+        \emph{Antwoord:} $((\forall i \in \mathbb{N} : 0 \leq i < ((\#woord / 2) - 1)) \wedge woord(i)=woord(\#woord-1-i)) \Rightarrow \# woord \leq 13 $ \\
+        \emph{Verbeterd antwoord:} $ ( deelwoord \in seg(woord) \wedge palindroom( deelwoord) ) \Rightarrow \#deelwoord \leq 13 $ \\
+        \emph{Redenering:} Nu wordt gekeken of het woord een palindroom bevat en niet alleen of het een
+        palindroom \\
+        is. Verder is Palindroom een boolse functie en seg een functie die alle niet lege consecutieve deelrijen van
+        een ingegeven rij geeft. \\
+
+    \item van een gegeven woord is geen enkel segment met lengte ten minste $14$ een palindroom. \\
+        \emph{Aanname:} \#W $>$ 0 \\
+        %orig 2c \emph{Antwoord:} $\exists_{ar} [ar \in W \wedge \#ar \geq 14 : \forall_{ar} [ \neg palindroom(ar)] ]$ \\
+        %orig 2c \emph{Verbeterd antwoord:} $\neg (\exists_{ar} [ar \in seg(W) :   \#ar \geq 14 \wedge \forall_{ar} [$palindroom(ar)$]) $ voor de definitie van palindroom en seg, zie sectie \ref{sec:functies} op \pageref{sec:functies}  \\
+        %orig 2c \emph{Redenering:} Het begrip ``segment'' en ``palindroom'' zijn hierin geimplementeerd. \\
+        \emph{Antwoord:} $\neg (\exists ar [ar \in seg(W) :   \#ar \geq 14 \wedge \forall_{ar} [$palindroom(ar)$]) $ voor de definitie van palindroom en seg, zie sectie \ref{sec:functies} op \pageref{sec:functies}  \\
+        \emph{Verbeterd antwoord:} $\forall_{deelwoord} [ deelwoord \in seg(woord) \wedge \#deelwoord > 13 : \neg palindroom(deelwoord) ]$ \\
+        \emph{Redenering:}
+
+\end{enumerate}
+\end{enumerate}

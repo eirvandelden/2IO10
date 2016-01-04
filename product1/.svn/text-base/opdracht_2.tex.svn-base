@@ -1,0 +1,50 @@
+%% productdocument 1, opgave 2 (Verzamelingen)
+
+\begin{enumerate}
+
+%%%%% Deelopgave 2.1 %%%%%
+\item Geef in goed Nederlands weer wat  de volgende verzamelingsexpressies voorstellen \ldots
+\begin{enumerate}
+
+    \item $\{x,y : x^2 + y^2 =1 : x\}$ \\
+        % \emph{Antwoord:} ``Een verzameling $x$-en waarvoor geld dat $x^2 + y^2 = 1$'' \\
+        % \emph{Verbeterd antwoord:} ``De verzameling $x$-co\"{o}rdinaten die op de eenheidscirkel liggen'' .\\
+        % \emph{Redenering:} Deze stijl van spreken is meer in de geest van de opgaven.\\
+        %orig 2: \emph{Antwoord:} ``De verzameling $x$-co\"{o}rdinaten die op de eenheidscirkel liggen'' .\\
+        \emph{Antwoord:} ``Een Verzameling $x$-co\"{o}rdinaten tussen $-1$ en $1$'' .\\
+        \emph{Verbeterd antwoord:} ``De verzameling waarden in het gesloten bereik [-1,1]. '' .\\
+        \emph{Redenering:} Het gebruik van eenheidscircel impliceerd het gebruik van 2 coordinaten, terwijl er maar 1 waarde terug
+        komt. \\
+
+    \item $X\setminus \{(x,y)\in X\times X : x > y : x\}$ \\
+        \emph{Antwoord:} ``Het kleinste element uit $X$''.\\
+        \emph{Verbeterd antwoord:} ``Geef het kleinste element uit $X$.'' \\
+        \emph{Redenering:} ``Geef'' toegevoegd (syntax). \\
+
+    \item $\{ar \in \mathbb{L}(A): \#ar = 5 \:\land\; ar\in VD : \mbox{\textsf{rev}}(ar)\}$, waarbij $A$ het gewone alfabet en $VD$ een woordenboek is.\\
+        %orig 1: \emph{Antwoord:} ``Alle woorden uit woordverzameling $VD$ die uit 5 letters bestaan omgedraaid'' .\\
+        %orig 1: \emph{Verbeterd antwoord:} ``Alle 5-letterwoorden uit het woordenboek, omgedraaid''.\\
+        %orig 1: \emph{Redenering:} De zinsbouw is zo minder gebonden aan de theorie.
+        \emph{Antwoord:} ``Alle 5-letterwoorden uit het woordenboek, omgedraaid''. \\
+        \emph{Verbeterd antwoord:} ``Alle 5-letterwoorden uit het woordenboek $VD$, omgedraaid.'' \\
+        \emph{Beredenering:} Het was niet duidelijk dat met ``het woordenboek'' daadwerkelijk $VD$ werd bedoeld. \\
+
+
+\end{enumerate}
+
+%%%%% Deelopgave 2.2 %%%%%
+\item Geef verzamelingsexpressies voor \ldots
+\begin{enumerate}
+
+    \item alle niet door $13$ of $37$ deelbare gehele getallen. \\
+        \emph{Antwoord:} $\{n \in \mathbb{N} | \neg ( 13 | n \vee 37 | n)\}$ \\
+        \emph{Verbeterd antwoord:} $\{n \in \mathbb{Z} | \neg ( 13 | n \vee 37 | n)\}$ \\
+
+    \item alle gehele getallen die met $481$ vermenigvuldigd  voorkomen als waarde van een gegeven geheeltallige functie, zeg $\varphi$. \\
+        \emph{Antwoord:} $(\cup ~a \in \mathbb{Z}, n \in \mathbb{Z} : (n \times 481) = \varphi(a) : \{n\})$ \\
+
+    \item alle deelverzamelingen van $\mathbb{N}$ waar $13$ wel maar $37$ niet inzit. \\
+        \emph{Antwoord:} $\{av \in \mathbb{P}(\mathbb{N}) : 13 \in av \wedge 37 \notin av : av\}$ \\
+
+\end{enumerate}
+\end{enumerate}

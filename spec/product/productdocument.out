@@ -1,0 +1,27 @@
+\BOOKMARK [0][-]{title.0}{Titelblad}{}
+\BOOKMARK [0][-]{chapter.1}{Samenvatting}{}
+\BOOKMARK [0][-]{chapter.2}{Inleiding}{}
+\BOOKMARK [0][-]{chapter.3}{User Requirements}{}
+\BOOKMARK [0][-]{chapter.4}{Inventarisatie}{}
+\BOOKMARK [1][-]{section.4.1}{Spel}{chapter.4}
+\BOOKMARK [1][-]{section.4.2}{Speelveld}{chapter.4}
+\BOOKMARK [1][-]{section.4.3}{Objecten}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.3.1}{Object}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.2}{Bewegend object}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.3}{Eten}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.4}{Bommen}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.5}{Explosie}{section.4.3}
+\BOOKMARK [2][-]{subsection.4.3.6}{Barak}{section.4.3}
+\BOOKMARK [1][-]{section.4.4}{Flow van het spel}{chapter.4}
+\BOOKMARK [2][-]{subsection.4.4.1}{Initialisatie}{section.4.4}
+\BOOKMARK [2][-]{subsection.4.4.2}{Spel}{section.4.4}
+\BOOKMARK [0][-]{chapter.5}{Specificatie}{}
+\BOOKMARK [1][-]{section.5.1}{Spel}{chapter.5}
+\BOOKMARK [1][-]{section.5.2}{Speelveld}{chapter.5}
+\BOOKMARK [1][-]{section.5.3}{Objecten}{chapter.5}
+\BOOKMARK [2][-]{subsection.5.3.1}{Bewegend object}{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.2}{Eten}{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.3}{Bommen}{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.4}{Explosies}{section.5.3}
+\BOOKMARK [2][-]{subsection.5.3.5}{Barak}{section.5.3}
+\BOOKMARK [0][-]{chapter.6}{Synthese}{}

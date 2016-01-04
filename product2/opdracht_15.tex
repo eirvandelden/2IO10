@@ -1,0 +1,28 @@
+%% Heroefening ``Wat een werk'', Opdracht 15
+
+\item De voltooiingstijd van een klus is de som der executietijden van uitvoeringen van die klus. Geef het predikaat dat uitdrukt dat de klussen met de langste voltooiingstijd ook de meest frequent uitgevoerde klussen zijn. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+%1:\emph{Antwoord:} $\forall_{k,l,m} [k\in{\mathcal{K},l,m\in{\mathcal{L}}} :  \wedge (+ l',m'\in{\mathbb{T}} : (e(l)-b(l))>(e(m)-b(m)) : l)]$ \\
+%\emph{Assessment:}  \\
+
+\emph{Antwoord:} $\forall_{k,l,m} [k\in{\mathcal{K},l,m\in{\mathcal{L}}} : (+ l',m'\in{\mathbb{T}} : (e(l)-b(l))>(e(m)-b(m)) : l)]$ \\
+%$ \exists k [ k \in \mathcal{K} : ((+ l
+%\in \mathcal{L} : n(l) = k : e(l) - b(l) ) = \uparrow (+ k' \in
+%\mathcal{K}, l' \in \mathcal{L} : n(l') = k' : e(l') - b(l')))
+%\Rightarrow \# \{l \in \mathcal{L} ~|~ n(l) = k \} =
+%\uparrow \# \{ k' \in \mathcal{K}, l' \in \mathcal{L} ~|~ n(l') = k' \} ] $ \\
+%\emph{Redenering:}  \\
+
+\emph{Verbeterd antwoord:} $\{k \in \mathcal{K} : vol(k) = (\uparrow k' \in \mathcal{K} :~:
+vol(k')) : k \} = \{ k \in \mathcal{K} : \#uitv(k) = (\uparrow k' \in \mathcal{K} :~: \#uitv(k')) :
+k \}$,
+
+waarbij $vol : \mathcal{K} \rightarrow \mathbb{R}$ de voltooiingstijd van een gegeven klus voorstelt, \\
+gegeven door $vol(k) = (+~ l \in \mathcal{L} : k = n(l) : e(l) - b(l))$ \\
+en $uitv : \mathcal{K} \rightarrow \mathbb{P}(\mathcal{L})$ de verzameling uitvoeringen van een gegeven klus voorstelt, \\
+gegeven door $uitv(k) = \{l \in \mathcal{L} : k = n(l) : l \}$.
+
+\emph{Redenering:} Hier geld heel strikt dat de 2 vergeleken verzamelingen exact gelijk zijn, deze noodzaak is uit de opdracht af te leiden door het meermalig gebruik van het lidwoord `de'. \\

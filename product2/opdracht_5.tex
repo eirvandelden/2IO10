@@ -1,0 +1,16 @@
+%% Heroefening ``Wat een werk'', Opdracht 5
+
+\item Definieer de functie die per uitvoering de later startende uitvoeringen van dezelfde klus geeft. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+%1\emph{Antwoord:} $f(m)$ = [ $l,m\in{\mathcal{L}}$: $b(l) < b(m) \wedge n(l)=n(m)$ : m ]\\
+%\emph{Assessment:}  \\
+
+\emph{Antwoord:} $f: \mathcal{L}\rightarrow \mathbb{P}(\mathcal{L})$, waarbij $f(m)$ = \{ $l \in \mathcal{L}$: $b(l) < b(m) \wedge n(l)=n(m) : m $\} \\
+\emph{Redenering:} De totale functie is een verzameling van de totaal aantal later startende uitvoeringen van dezelfde klus. \\
+\emph{Assessment:} Het pakt de uitvoeringen die eerder starten en geeft de gegeven klus terug. \\
+
+
+\emph{Verbeterd antwoord:} $f: \mathcal{L} \rightarrow \mathbb{P}(\mathcal{L})$, waarbij $f(m)$ = \{ $l \in \mathcal{L}$: $b(m) < b(l) \wedge n(m)=n(l) : l $\} \\

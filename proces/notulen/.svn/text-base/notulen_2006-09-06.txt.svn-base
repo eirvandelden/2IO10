@@ -1,0 +1,111 @@
+OGO 1.1
+Groep 1a
+
+Vergadering 1
+06-09-2006, 13:40 - 14:10
+Voorziter: (rol werd gedeeld)
+Notulist: Nick
+
+
+
+Opening
+
+
+Om 13:40 wordt de vergadering geopend. Dit is de eerste vergadering van de eerste OGO casus. Na het bij elkaar sprokkelen van de groepsleden komen we tot de conclusie dat we iemand missen. Onze begeleider, Martijn, zoekt even in zijn lijstje wie er mist.
+
+Gijs Direks is een dubbele P'er en voor hem is er blijkbaar geen OGO, dus onze groep zal bestaan uit 6 personen, namelijk:
+	Bakker L.F.B.C. (Leroy)
+	Berkeveld R.A.J. (Roy)
+	Dal G.H. (Giso)
+	Delden E.I.R. van (Etienne)
+	Dudojevic E. (Edin)
+	Veeken N. van der (Nick) 
+
+Omdat er nog niet is afgesproken wie de voorzitter en notulist zijn wordt dit ad hoc geregeld. Nick maakt notulen en Giso zit voor. Martijn zorgt voor de nodige uitleg. Normaal gezien is er ook een agenda, maar aangezien dit de eerste vergadering is, ontbreekt deze. De voorzitter is normaal gezien degene die de agenda maakt en die deze uitprint, één voor de begeleider en één voor elk groepslid.
+
+
+
+
+Afspraken
+
+
+Om een en ander organisatorisch soepel te laten lopen hebben we een aantal afspraken gemaakt die voor elk groepslid gelden:
+	Wees op tijd, als dit niet mogelijk is, licht dan de voorzitter (of eventueel een ander groepslid) zo snel mogelijk in.
+	Ieder dient zelf zijn logboek bij te houden. Hiervoor wordt waarschijnlijk deze week nog een online systeem voor beschikbaar gemaakt.
+	Er komt een lijst met contactinformatie op studyweb. Dit zal een lijst met in ieder geval emailadressen zijn. Communicatie via MSN messenger wordt ook als mogelijk middel genoemd.
+	Notulen worden uitgewerkt door de notulist en zullen digitaal beschikbaar worden gemaakt via studyweb op de dag waarop de vergadering heeft plaatsgevonden.
+	Ieder groepslid heeft bij aanvang van een vergadering de notulen van de voorgaande vergadering doorgelezen en eventueel commentaar paraat. Natuurlijk mag commentaar op de notulen ook al voor de vergadering via studyweb worden medegedeeld.
+
+
+
+
+Casus
+
+
+De bedoeling van dit OGO-project (casus) is het opdoen van vaardigheden in het correct formeel formuleren en het documenteren met behulp van LaTeX. Ook komt het 'reviewen' van elkaars werk aan bod. Practisch gezien houdt dit in dat er huiswerk gemaakt moet worden. Het gaat om de opgaven in het deel 'Wiskundige hulpmiddelen' van de OGO-projectwijzer. De gemaakte opgaven worden dan tijdens de OGO-bijeenkomsten besproken, verbeterd en verwerkt tot een eindresultaat in LaTeX.
+
+
+
+
+Planning
+
+
+Voor de casus zijn vijf collegeweken beschikbaar, waarvan deze week de eerste is. Er zijn in totaal 7 paren opgaven die alle uit een aantal deelopgaven bestaan. Het eerste paar opgaven wordt nog deze week afgemaakt. De andere 6 opgaven worden gemaakt à 2 opgaven per week, zodat de vijfde week overblijft om het eindresultaat, een productdocument en een processverslag, te maken uit de eerder gemaakte opgaven, peer-reviews en notulen.
+
+De rollen van voorzitter en notulist zullen steeds bij het begin van de vergadering wisselen (dus je hebt je rol voor een week). Als je een week notulist bent, dan ben je in de daarop volgende week voorzitter. 
+
+De planning ziet er als volgt uit:
+(datum van, datum tot, voorzitter, notulist)
+wk 36/37, van 06-09-2006 tot 13-09-2006: Nick, (hier zou 'Leroy' moeten staan voor de correctheid..)
+wk 37/38, van 13-09-2006 tot 20-09-2006: Leroy, Roy
+wk 38/39, van 20-09-2006 tot 27-09-2006: Roy, Giso
+wk 39/40, van 27-09-2006 tot 04-10-2006: Giso, Etienne
+wk 40/41, van 04-10-2006 tot 11-10-2006: Etienne, Edin
+wk 41/42, van 11-10-2006 tot 18-10-2006: Edin, Nick
+...etc
+
+De vergaderingen waarbij ook Martijn aanwezig is zullen plaatsvinden op woensdagen, om 13:30 in HG 8.58
+
+Deadlines die in de gaten gehouden moeten worden zijn:
+	vrijdag 06-10-2006, 23:59, productdocument
+	vrijdag 17-11-2006, 23:59, product- en procesdocument
+
+De peer-assessments vinden plaats in de weken 39 en 44. Ook is er op 14-09-2006 een LaTeX training, deze vindt plaats tijdens het P-colloquium, uur 2, AUD 4.
+
+
+Opgaven
+
+
+De opgaven worden gemaakt door iedereen, echter in twee groepen: Een 'maak-groep' en een 'controle-groep'. De maak-groep maakt individueel de gegeven opdrachten en neemt de resultaten mee naar de OGO-bijeenkomsten. De controle-groep zal vervolgens tijdens de OGO-bijeenkomsten het werk van de maak-groep vergelijken met eigen ideeën en de opgaven op correctheid controleren en hiervan verslag doen in een peer-review. Meer informatie over de precieze inhoud van zo'n review is te vinden in de projectwijzer.
+
+De opgaven die voor de komende vrijdag moeten worden voorbereid zijn:
+	Voor Leroy, Roy en Giso:
+		par. 1.3, van formulevorm naar correcte Nederlandse beschrijving
+		par. 2.1, van beschrijving naar formulevorm
+	Voor Etienne, Edin en Nick:
+		par. 1.3, van beschrijving naar formulevorm
+		par. 2.1, van formulevorm naar beschrijving
+
+Vrijdag zal iedereen de rol in de rol van 'maak-groep' zitten: met je groep probeer je tot een gezamelijk correct antwoord te komen aan de hand van het voorbereide werk. Voor aanstaande woensdag moet je dan de andere helft van de opgaven voorbereiden, zodat woensdag iedereen de opgaven van de andere groep kan controleren en vergelijken met de eigen uitwerkingen.
+
+
+
+
+Todo
+
+
+Voor komende bijeenkomst, aanstaande vrijdag, moet er nog het een en ander gebeuren, hier even een bondige lijst:
+	Zorg dat je de mogelijkheid hebt om LaTeX documenten te maken op je laptop.
+	Bekijk broncode van al bestaande LaTeX documenten om alvast een idee te krijgen van de syntax en de mogelijkheden.
+	Probeer wat uit en probeer een testdocument te maken als je nog niet met LaTeX overweg kan.
+	Post je contactgegevens voor deze casus op studyweb (ik suggereer om dit in de "Groep 1a" map te doen).
+	Werk het logboek bij wanneer dit beschikbaar is (Etienne gaat hier achter aan).
+	Lees deze notulen voor aanvang van de aankomende vergadering.
+	
+
+
+
+Sluiting
+
+
+De vergadering wordt gesloten om 14:10. Volgende week, woensdag 13 september, zal de volgende vergadering gehouden worden om 13:30 in HG 8.58

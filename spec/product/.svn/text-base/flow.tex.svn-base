@@ -1,0 +1,63 @@
+\subsection{Initialisatie}
+Voor het spel kan beginnen moet er een speelveld worden gemaakt. De
+Initialistie wordt gestart en genereerd een speelveld met daarop een
+looppad. Alles wat geen looppad is, is een muur. Het looppad is
+hierbij dus nooit doodlopend en er kunnen geen ``eilanden''
+ontstaan. Dit wil zeggen dat delen van het speelveld niet afgesloten
+kunnen zijn voor ``Taaru no Kizoku''. Een barak wordt geplaatst in
+het midden van het veld. Alle overige co\"ordinaten van het looppad
+worden nu gevuld met sushi of wasabi.
+
+\subsection{Spel}
+Het speelveld is nu gemaakt en het spel kan gaan beginnen. ``Taaru
+no Kizoku'' krijgt een startpositie en er worden samurai gecre\"eerd
+vanuit hun startposite, de barak. De hoeveelheid samurai is
+afhankelijk van de grootte van het speelveld. Taaru no Kizoku krijgt
+een bepaald aantal levens die globaal over het spel gelden. Deze
+levens kunnen verloren gaan op verschillende manieren. Als Taaru
+dood gaat, zal het aantal levens afnemen tot een ondergrens is
+bereikt, met als gevolg dat het spel eindigt en er een score zal worden weergegeven.\\
+
+Door middel van de gebruiker kan Taaru no Kizoku zich verplaatsen
+over alle co\"ordinaten van het looppad. Taaru kan zich alleen
+verplaatsen naar een buur-co\"ordinaat op het looppad vanaf zijn
+huidige positie. Door sushi of wasabi te eten ( Taaru bevindt zich
+op dezelfde positie als sushi of wasabi ), wordt de sushiteller
+verhoogd. De waarde van de sushiteller komt overeen met een aantal
+potions. Deze potions kunnen worden gebruikt ten
+koste van het uiteindelijk te halen punten. \\
+
+Op ieder gegeven moment kunnen de verkregen potions worden gebruikt
+in ruil voor Taaru no Kizoku's powers. De powers zullen een
+verschillend aantal potions kosten. Een mogelijkheid is om een bom
+neer te leggen, waarvan ook een grotere variant beschikbaar is. Bij
+het neerleggen van de bom zal er op hetzelfde moment een aflopende
+timer gaan lopen. Op het moment dat de timer eindigt, zal deze
+verdwijnen en er zullen er verschillende explosies plaatsvinden
+waarvan het aantal en de posities afhankelijk zijn van de grootte
+van de neergelegde bom. Ieder bewegend object dat zich in het bereik
+van de ontploffing bevindt, zal dood gaan. De bom komt ook tot
+ontploffing wanneer er een bewegend object zich op dezelfde plek
+bevindt als de neergelegde bom, waarbij de timer automatisch
+verdwijnt. Een andere power van Taaru no Kizoku is het laten
+ontstaan van een aardbeving. Deze zal direct plaatsvinden bij
+activering en zal ervoor zorgen dat de samurai stil zullen staan. Op
+dit moment zal er voor alle aanwezige samurai een aflopende timer
+starten. Wanneer de ondergrens van de timer is bereikt, gaan de
+samurai weer bewegen. Voor samurai gelden dezelfde regels van
+verplaatsing als voor Taaru no Kizoku zelf. In het geval dat Taaru
+no Kizoku een positie deelt met een samurai, zal Taaru no Kizoku
+dood gaan, waarna het level volledig opnieuw wordt gestart. Wanneer
+Taaru no Kizoku een Wasabi eet, zal zijn staat veranderen in
+``flaming''. Dit heeft hetzelfde gevolg als de power aardbeving
+wordt gebruikt, echter wanneer Taaru no Kizoku nu een samurai
+tegenkomt, zal de samurai dood gaan en zal Taaru no Kizoku een
+bepaald aantal bonus punten krijgen. Wanneer de stilstaan-timer van
+de samurai eindigt, zal Taaru no Kizoku zijn toestand terug
+verranderen naar normaal. De samurai verdwijnt van zijn huidige
+positie en verschijnt na enige tijd weer op zijn startpositie, de barak.\\
+
+Wanneer alle sushi en wasabi uit het level zijn verdwenen, wordt de
+score bijgewerkt op het huidige aantal sushi's en begint een nieuw level door door de index van
+speelveld te verhogen. Het aantal levens en de score blijven behouden,
+de andere eigenschappen van pacman worden teruggezet naar hun initiele toestand.

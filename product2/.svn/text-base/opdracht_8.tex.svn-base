@@ -1,0 +1,17 @@
+%% Heroefening ``Wat een werk'', Opdracht 8
+
+\item Doe dat ook voor een willekeurige verzameling van klusuitvoeringen. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+%1:\emph{Antwoord:} $\{ k,l \in \mathcal{L}$ $ | $ $ ( b( n(k)) < b( n(l)) < e( n(k)) ) \lor ( b( n(k)) < e( n(l)) < e( n(k)) \} $  \\
+%\emph{Assessment:}  \\
+
+\emph{Verbeterd antwoord:} Neem $ \mathcal{L}' \subseteq \mathcal{L} $ als deze willekeurige verzameling \\
+$( k,l \in \mathcal{L}' ~|~ ( b(k) \leq b(l) < e(k) ) \lor ( b(l) \leq b(k) < e(l) ) $  \\
+%\emph{Redenering:}  \\
+\emph{Assessment:} De $\forall$ ontbreekt. \\
+
+\emph{Verbeterd antwoord:} Neem $ \mathcal{L}' \subseteq \mathcal{L} $ als deze willekeurige
+verzameling. Dan moet gelden $( \forall~ k,l \in \mathcal{L}' ~|~ ( b(k) \leq b(l) < e(k) ) \lor ( b(l) \leq b(k) < e(l) ) $  \\

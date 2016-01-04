@@ -1,0 +1,112 @@
+
+
+\section{Verzamelingen}
+$object$ = \{ bewegend, eten, bommen, muren, barakken \}, de verzameling objecten, dan wel niet onderverdeeld\\
+\\
+\subsection{Deel verzamelingen}
+$bewegend$ = \{ ``Taaru no kizoku'', samurai\}, de verzameling bewegende objecten \\
+$eten$ = \{ sushi, wasabi \}, de verzameling eetbare objecten\\
+$bom$ = \{ kleine bom, grote bom \}, de verzameling van verschillende grotes van bommen \\
+\\
+$sushis$ = \{ sushi.positie  \} , oftwel sushi is de verzameling sushi's in het veld, ge\"identificeerd aan hun co\"ordinaten
+$wasabis$ = \{ wasabi(x,y)  \} , oftwel wasabi is de verzameling sushi's in het veld, ge\"identificeerd aan hun co\"ordinaten
+
+\subsection{Speelveld}\label{sub:Speelveld} % (fold)
+
+\begin{enumerate}
+
+ \item Speelveld.breedte, Speelveld.hoogte $ ~ \in \{ x \in \mathbb{N} : x \geq 3 \wedge x = 1~
+ \textbf{mod} ~2 : x \}$
+ \item $ Speelveld.Coordinaat = \{ (x,y) \in \mathbb{N}^2 : 0 \leq x
+ \leq $ Speelveld.breedte $ ~ \wedge ~ 0 \leq y \leq $ Speelveld.hoogte $ : (x,y) \} $
+ \item $ Muren \subseteq Speelveld.Coordinaat $ \\
+       $ Looppaden \subseteq Speelveld.Coordinaat $ \\
+       $ Muren \cap Looppaden = \emptyset $
+ \item $ \#Samurais \leq $ Speelveld.Samurailimiet
+ \item   Barak.Positie = ( 0.5 $\ast$ Speelveld.breedte, 0.5 $\ast$ Speelveld.hoogte) \\
+         Barak.Positie $\in Looppaden $
+ \item $ Wasabis \subseteq Looppaden $
+ \item $ Sushis \subseteq Looppaden $ met $ Sushis \cap Wasabis = \emptyset $
+ \item   Bom.Positie $\in Looppaden $
+
+\end{enumerate}
+
+\subsection{Taaru no Kizoku}\label{sub:taaru_no_kizoku} % (fold)
+
+
+% subsection taaru_no_kizoku (end)
+
+
+\subsection{Samurai}\label{sub:samurai} % (fold)
+
+% subsection samurai (end)
+
+\subsection{Eten}\label{sub:eten} % (fold)
+
+$verdwijn: (gebeurtenissen, taaru, eten) \rightarrow (eten')$
+
+$eten' = eten \oplus (eten \backslash {x \in eten : taaru.positie = x.positie : x})$
+
+% dit nemen we even als voorbeeld, hier staat in principe f(a)=b, in dit geval
+% eten(sushi) = sushi,  de oude waarde van sushi word overschreven door de nieuwe (rechter) sushi waarde. Hier is sushi een verzameling die een verzameling aanpast.
+
+%Nog een voorbeeld: beweging (niet helemaal uitgewerkt).
+% beweging : coordinaten -> coordinaten
+% beweging is een formule waarbij de linker waarde vervangen word door de rechter.
+% LET OP! als je omhoog beweegt, moet je alleen de y coordinaat aanpassen, dus:
+% bewegingverticaal(x,y) (a): IF y = a -> a
+%                    ELSE y ≠ a -> beweging(x,a)
+%
+% subsection eten (end)
+
+
+\subsection{Sushi}\label{sub:sushi} % (fold)
+
+sushi $\in sushis$ \\
+
+% subsection sushi (end)
+
+\subsection{Wasabi}\label{sub:wasabi} % (fold)
+
+% subsection wasabi (end)
+
+\subsection{Bom}\label{sub:bom} % (fold)
+
+% subsection bom (end)
+
+\subsection{Kleine Bom}\label{sub:kleine_bom} % (fold)
+\begin{enumerate}
+\item $bom.positie \subseteq Speelveld.looppad$
+\item $bom.klein = ( potions : potions \in \mathbb{N} \wedge potions \geq 1 : potions - 2 )$
+\item $bom.explosie = ( teller, trigger \in \mathbb{N} : bom.klein =
+True \wedge ( teller = 0 \vee trigger = 1 ) : grote explosie )$
+\item kleinebom.explosie ( bewegend object, plek, object ) = (
+bewegend object', plek')\\
+bewegend object' = bewegend object $\oplus$ ( dood )\\
+plek' = plek $\oplus$ ( weg bom )\\
+\end{enumerate}
+% subsection kleine_bom (end)
+
+\subsection{Grote Bom}\label{sub:grote_bom} % (fold)
+
+% subsection grote_bom (end)
+
+\subsection{Muur}\label{sub:muur} % (fold)
+muren $\subseteq$ object \\
+muur $\in$ muren
+% subsection muur (end)
+
+\subsection{Barak}\label{sub:barak} % (fold)
+
+barak $\in object$ \\
+barak.timer $= \mathbb{N}$ \\
+barak.teller $= \{ i \in \mathbb{N} | i \leq$ ``samurai limiet'' \} \\
+spawn\_samurai: $samurai \rightarrow samurai$ \\
+
+\#speelveld.samurai $\leq $``samurai limiet'' $\Rightarrow$ spawn\_samurai
+
+
+%\underline{if} \#speelveld.samurai $\neq$ ``samurai limiet'' $\rightarrow$ spawn\_samurai \\
+%$\square$ \#speelveld.samurai $=$ ``samurai limiet'' $\rightarrow$ \textbf{skip} \\
+%\underline{fi}
+% subsection barak (end)

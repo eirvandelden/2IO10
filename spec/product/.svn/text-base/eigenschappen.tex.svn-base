@@ -1,0 +1,77 @@
+%Een eigenschap breid een object uit dan wel niet via een andere eigenschap. Een eigenschap beschrijft bepaalde karakteristieke variabelen en methoden op die variabelen. Een object wat
+%een bepaalde eigenschap bevat kan gebruik maken van desbetreffende methoden en variabelen en z\'al dat ook als er voorwaarden gegeven zijn, dan wel bij het
+%voldoen aan die voorwaarden.
+
+\subsection{Beweging}
+Een object met beweging heeft:
+\begin{enumerate}
+  \item Een snelheid (stilstaand, lopend)
+  \item Een richting
+\end{enumerate}
+Een object met beweging kan:
+\begin{enumerate}
+  \item Van positie veranderen (1 vakje in de aangegeven richting) \\
+    bij een Spelstap, mits de snelheid niet stilstaand is.
+  \item Van richting veranderen
+  \item Van snelheid veranderen
+\end{enumerate}
+
+\subsection{Dood gaan}
+\begin{enumerate}
+  \item het object verdwijnt van het spel \\
+   % \begin{enumerate}
+      \item als hij in contact komt met pacman \'en \\
+        als pacman de toestand flaming heeft
+      \item of: als er een explosie plaatsvindt toegepast op dit object
+    %\end{enumerate}
+\end{enumerate}
+
+\subsection{Eten}
+Een object wat kan eten heeft:
+\begin{enumerate}
+  \item een teller voor het aantal gegeten \textbf{sushi}'s (naar onder begrensd tot 0)
+  \item een teller voor een aantal \textbf{mana potions} (naar onder begrensd tot 0)
+\end{enumerate}
+Een object dat kan eten kan:
+\begin{enumerate}
+  \item 10 aftrekken van de sushi-teller en 1 optellen bij het aantal mana potions \\
+    dit gebeurt zodra de sushiteller $\geq$ 10 wordt
+  \item het aantal mana potions verminderen met 1, 2, 3 of 4
+  \item het aantal gegeten sushi's verhogen met 1 \\
+    bij een \textbf{botsing} tussen sushi en pacman
+\end{enumerate}
+
+\subsection{Levens}
+Een object met levens heeft:
+\begin{enumerate}
+  \item een teller voor het aantal levens (naar onder begrensd tot 0)
+\end{enumerate}
+Een object met levens kan:
+\begin{enumerate}
+  \item een leven verliezen \\
+    bij een explosie \\
+    bij contact met een samurai, als het object als status niet 'flaming' is
+  \item een leven erbij krijgen \\
+    bij het gebruik van 4 mana-potions
+\end{enumerate}
+
+\subsection{Timer}
+Een object met de eigenschap timer heeft:
+\begin{enumerate}
+  \item een teller, naar onder begrensd tot 0
+\end{enumerate}
+Een object met de eigenschap timer kan:
+\begin{enumerate}
+  \item de teller instellen
+  \item deze teller laten afnemen \\
+  bij het optreden van de gebeurtenis Spelstap
+  \item de timer laten afgaan \\
+  wanneer de teller gelijk is aan 0
+\end{enumerate}
+
+\subsection{Bom}
+\begin{enumerate}
+  \item heeft een \textbf{timer}
+  \item kan geplaatst worden op een gegeven positie gelijk aan die van \textbf{Taaru no Kizoku}
+  \item heeft een \textbf{timer} voor het bijhouden van de explosieduur (standaard ingesteld op 1), bij afgaan verdwijnt de bom
+\end{enumerate}

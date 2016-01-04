@@ -1,0 +1,32 @@
+\section{Samurai}\label{sec:samurai} % (fold)
+
+\textbf{samurai} $\in$ \textbf{samurais} \\
+Eigenschappen:
+\begin{enumerate}
+  \item stilstaan\_duur $\in \mathbb{N}$
+\end{enumerate}
+Acties:
+\begin{enumerate}
+<<<<<<< .mine
+  \item verdwijn: $\{$samurais$\}$, \emph{looppad} $\rightarrow$ samurais' \\
+=======
+  \item verdwijn: $\{$samurais$\}$ $\times$ looppad $\rightarrow$ samurais' \\
+  verdwijn (samurais, samurai\_positie) = (samurais') \\
+>>>>>>> .r401
+  samurais' = samurais $\oplus$ (samurai\_positie, $\emptyset$)
+  \item verander\_stilstaan\_duur: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+  verander\_stilstaan\_duur (stilstaan\_duur) = (stilstaan\_duur') \\
+  stilstaan\_duur' = stilstaan\_duur $\oplus$ (stilstaan\_duur, stilstaan\_duur + 1)
+\end{enumerate}
+
+%\textbf{Stilstaan} \\
+%$samurai.stilstaan: (samurai.snelheid, samurai.stilstaanteller) \rightarrow (samurai.snelheid', samurai.stilstaanteller')$ \\
+%$samurai.snelheid' = samurai.snelheid \oplus (samurai.snelheid := 0)$ \\
+%$samurai.stilstaanteller' = samurai.stilstaanteller \oplus (samurai.stilstaanteller - 1)$ \\
+
+%\textbf{Verdwijnen} \\
+%$samurai.verdwijn: (samurais, samurai.positie, taaru.positie, bommen) \rightarrow (samurais')$ \\
+%$samurais' = (samurais \oplus (samurais \backslash (samurai \in samurais::samurai.positie=taaru.positie \wedge \exists{bom}(bom \in bommen : samurai.positie =
+%bom.positie : bom.positie):samurai)))$
+
+% section samurai (end)

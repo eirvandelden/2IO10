@@ -1,0 +1,14 @@
+%% Heroefening ``Wat een werk'', Opdracht 26
+
+\item $(+ l : l \in \mathcal{L} : u(n(l)) * (e(l) - b(l)))$, \\
+    waarbij $u : \mathcal{K} \rightarrow \mathbb{N}$ het aantal personen geeft dat nodig is om de klussen te klaren. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} Geef een klus met de totale tijd dat eraan is gewerkt. \\
+\emph{Assessment:} Gedeeltelijk fout, o.a. de klus wordt niet teruggegeven \\
+
+\emph{Verbeterd antwoord:} Geef het aantal manuren dat nodig is om alle werkzaamheden te verrichten. \\
+%\newline
+%\emph{Redenering:} gedeeltelijk fout, o.a. de klus wordt niet teruggegeven  \\

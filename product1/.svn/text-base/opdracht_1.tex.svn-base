@@ -1,0 +1,50 @@
+%% productdocument 1, opgave 1 (Rijtjes)
+
+\begin{enumerate}
+
+%%%%% Deelopgave 1.1 %%%%%
+\item Geef in goed Nederlands weer wat  de volgende rijtjesexpressies voorstellen \ldots
+\begin{enumerate}
+
+    \item $[ a : a \inr ar : 1 ] $ \\
+        %orig 1: \emph{Antwoord:} ``Geef een rij enen voor ieder element in de rij $ar$.'' \\
+        %orig 1: \emph{Verbeterd antwoord:} ``Geef een rij van enen even lang als $ar$.'' \\
+        %orig 1: \emph{Redenering:} Andere formulering om onduidelijkheden te voorkomen. \\
+        \emph{Antwoord:} ``Geef een rij van enen even lang als $ar$.'' \\
+        %onzin: \emph{Verbeterd antwoord:} ``Geef een rij van producten van twee opeenvolgende elementen uit rij $ar$, waarbij iefdere index van de eerste gactor even is.''\\
+        %onzin: \emph{Redenering:} verbeterde formulering. \\
+
+    \item $[ a: a \inr ar\; \land\; a<0 : a]\cat [a: a \inr ar \:\land \; a>0 : a]$ \\
+        \emph{Antwoord:} ``Geef de rij ar, maar beginnend met alle negatieve elementen van ar en 0 weglatend.'' \\
+        \emph{Verbeterd antwoord:} ``Geef de rij $ar$, maar beginnend met alle negatieve elementen van $ar$ en 0 weglatend, waarbij verdere volgorde behouden blijft.'' \\
+
+    \item $[ i \in \mathbb{N}: 0 \leq 2i\!+\!1<\#ar : ar(2i) * ar(2i\!+\!1)]$ \\
+        %orig 1: \emph{Antwoord:} ``Geef de producten van de opeenvolgende paren elementen uit de rij $ar$.'' \\
+        %orig 1: \emph{Verbeterd antwoord:}  ``Geef de producten van de opeenvolgende paren elementen beginnend met een even index uit de rij $ar$.'' \\
+        %orig 1: \emph{Redenering:} Een element mag maar \'e\'en keer in een paar voorkomen. Onze eerste formulering voldeed niet aan deze eis.
+        \emph{Antwoord:} ``Geef de producten van de opeenvolgende paren elementen beginnend met een even index uit de rij $ar$.'' \\
+        %\emph{Verbeterd antwoord:} ``Geef een rij van producten van twee opeenvolgende elementen uit rij $ar$, waarbij iedere index van de eerste factor even is.'' \\
+        \emph{Antwoord:} ``Geef de producten van de opeenvolgende paren elementen beginnend met een even index uit de rij $ar$, volgens de volgorde van voorkomen van de elementen.'' \\
+
+\end{enumerate}
+
+%%%%% Deelopgave 1.2 %%%%%
+\item Geef rijtjesexpressies voor \ldots
+\begin{enumerate}
+
+    \item het rijtje nullen in de rij $~ar~$ met hun plaats van voorkomen. \\
+        %orig 1: \emph{Antwoord:} $[ i \in \mathbb{N} : 0 \leq i < \#ar \land ar(i) = 0: ar(i), i]$ \\
+        \emph{Antwoord:} $[ i \in \mathbb{N} : 0 \leq i < \#ar \land ar(i) = 0: ar(i), i]$ \\
+        \emph{Verbeterd antwoord:} $ [i \in \mathbb{N} : 0 \leqslant i < \#ar \wedge ar(i) = 0 : (ar(i), i)] $ \\
+        \emph{Redenering:} een syntax fout, $ar(i),i$ is geen tupel, dus moest dat $(ar(i),i)$ worden. \\
+
+    \item het palindroom dat ontstaat door een rij te spiegelen \\
+        \emph{Antwoord:} $rev(ar) = [ i : 0 \leq i < \#ar : ar(\#ar-1-i)]$ \\
+            $ar \cat rev(ar)$ \\
+
+    \item het rits resultaat van twee even lange rijtjes. \\
+        \emph{Antwoord:} $[i \in \mathbb{N} : 0 \leq i < 2 \#ar :$ if $(i$ mod $2) = 0 \Rightarrow ar(i / 2) \Box (i$ mod $2 ) = 1 \Rightarrow br((i-1) / 2)]$. \\
+        \emph{Aanname:} $ar$ en $br$ zijn even lang. \\
+
+\end{enumerate}
+\end{enumerate}

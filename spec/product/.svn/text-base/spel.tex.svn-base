@@ -1,0 +1,15 @@
+Het \textbf{spel} is het hoofdelement van het spel, de rest is hieraan gekoppeld.
+
+Eigenschappen:
+\begin{enumerate}
+  \item een rij levels, die wij \textbf{speelveld}en noemen
+  \item een \textbf{taaru}
+  \item een \textbf{index} voor het huidige \textbf{speelveld}
+
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan \textbf{index verhogen}
+  \item kan het spel \textbf{starten}
+  \item kan het spel \textbf{stoppen}
+\end{enumerate}

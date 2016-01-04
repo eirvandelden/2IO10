@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 12
+
+\item Defineer een relatie $\preccurlyeq$ die uitdrukt dat de ene uitvoering plaats vond v\'{o}\'{o}r de andere. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} $\preccurlyeq : \mathcal{L} \thicksim \mathcal{L}$, waarbij $x \preccurlyeq y = e(x) \leq b(y)$ \\
+%\emph{Assessment:}  \\
+
+%\emph{Verbeterd antwoord:}  \\
+%\emph{Redenering:}  \\

@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 25
+
+\item Als die voorbereiding per uitvoering apart moet bestaan, hoe ziet dan de check op correcte voorbereiding er uit? \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} $\forall{_k} [ k \in{\mathcal{K}} : b(k) > (l\in{\mathcal{K}} : {v(l)} : \downarrow{e(l)}]$  \\
+%\emph{Assessment:}  \\
+
+\emph{Verbeterd antwoord:} $\forall_{t, k, k'} [ t \in \mathbb{T} \land k \in \mathcal{K} \land k' \in v(k) : \#\{l \in \mathcal{L} ~|~ (n(l) = k') \land (e(l) \leq (\uparrow l' \in \mathcal{L} : n(l') = k \land e(l') \leq t : b(l'))) \} \geq \#\{ l \in \mathcal{L} ~|~ n(l) = k \land e(l) \leq t \} ] $ \\
+%\emph{Redenering:}  \\

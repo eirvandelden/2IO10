@@ -1,0 +1,33 @@
+%\section{Verzamelingen}\label{sec:verzamelingen} % (fold)
+
+Hieronder staat een lijstje van de verzamelingen waar wij gebruik van maken. Later wordt uitgelegd hoe de verzameling is gespecificeerd. \\ \ \\
+$taaru$ \\
+$samurais$ \\
+$sushi$ \\
+$wasabi$ \\
+$kleine\_bommen$ \\
+$grote\_bommen$ \\
+$speelveldco$\"o$rdinaten $ \\
+$muren$ \\
+$looppad$ \\
+$barak$\\
+$bewegend$\\
+$eten$ \\
+$bommen$ \\
+$spel$ \\
+$objecten$ \\
+$explosies$ \\
+\\
+\\
+Wij hebben gebruik gemaakt van de operator $\oplus$ om het variabel zijn van een object aan te duiden. Deze defineren wij als volgt: \\
+\\
+object' = object $\oplus$ (gegeven\_object, nieuwe\_waarde) \\
+waarbij object' op een gekozen moment kan veranderen naar nieuwe\_waarde \\
+of, bij een verzameling: \\
+$objectverzameling'$ = $objectverzameling$ $\oplus$ (gegeven\_object, nieuwe\_waarde) \\
+waarbij het object aangegeven door gegeven\_object uit de verzameling $objectverzameling$ nieuwe\_waarde krijgt, dit maakt dus de $objectverzameling$ dynamisch \\
+\\
+In principe is dit een flexibele assignment, met het subtiele verschil dat de verandering plaats k\'an vinden, en dit niet onmiddelijk doet.
+
+
+% section verzamelingen (end)

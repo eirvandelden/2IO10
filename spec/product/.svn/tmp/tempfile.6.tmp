@@ -1,0 +1,125 @@
+<<<<<<< .mine
+=======
+%\includegraphics[width=20cm,angle=90]{overerving_objecten}
+
+>>>>>>> .r357
+\subsection{Object}
+Een object heeft bepaalde eigenschappen en kan geplaatst worden op het speelveld. Verder kan een object een bepaalde gebeurtenis oproepen nadat aan bepaalde condities is voldaan.
+
+Eigenschappen:
+\begin{enumerate}
+\item Een object heeft een \textbf{positie} op het looppad.
+\end{enumerate}
+
+
+\subsection{Bewegend object}
+Een bewegend object erft alle eigenschappen en acties van een object. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een \textbf{snelheid}
+  \item heeft een \textbf{richting}
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan van \textbf{positie} veranderen
+  \item kan van \textbf{snelheid} veranderen
+  \item kan van \textbf{richting} veranderen
+\end{enumerate}
+
+\subsection{Taaru no Kizoku}
+Taaru no Kizoku erft alle eigenschappen en acties van een bewegend object. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een toestand: \textbf{flaming} of \textbf{normaal}
+  \item heeft een \textbf{flamingduratie}
+  \item heeft een \textbf{score}
+  \item heeft een teller voor het aantal gegeten sushi's: \textbf{sushi\_teller}
+  \item een teller voor het aantal potions: \textbf{potion\_teller}
+  \item heeft een teller voor het aantal levens: \textbf{levens\_teller}
+
+\end{enumerate}
+Acties:
+\begin{enumerate}
+%\textbf{eten}
+  \item sushi teller laten veranderen
+  \item potion teller laten veranderen
+  \item kan toestand veranderen
+  \item kan \textbf{flamingduratie} veranderen
+  \item kan sterven
+  \item kan score veranderen
+\end{enumerate}
+
+\subsection{Samurai}
+Samurai erven alle eigenschappen en acties van een bewegend object. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een teller voor het stilstaan: \textbf{stilstaan\_duur}
+\end{enumerate}
+
+Acties:
+\begin{enumerate}
+  \item kan \textbf{verdwijnen} van het spel
+  \item kan stilstaan\_duur veranderen
+\end{enumerate}
+
+\subsection{Eten}
+Eten erft alle eigenschappen en acties van een object. \\
+Acties:
+\begin{enumerate}
+  \item kan \textbf{verdwijnen}
+\end{enumerate}
+
+\subsection{Sushi}
+Sushi erft alle eigenschappen en acties van \textbf{eten}.
+
+\subsection{Wasabi}
+Wasabi erft alle eigenschappen en acties van \textbf{eten}.
+
+
+\subsection{Bom}
+Bommen erven alle eigenschappen en acties van een object. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een teller voor het afgaan: \textbf{delay\_teller}
+Acties:
+\begin{enumerate}
+  \item kan delay\_teller veranderen
+  \item kan verschijnen
+  \item kan verdwijnen
+\end{enumerate}
+\end{enumerate}
+
+\subsection{Kleine Bom}
+Kleine bommen erven alle eigenschappen en acties van een bom. \\
+
+\subsection{Grote Bom}
+Grote bommen erven alle eigenschappen en acties van een bom. \\
+
+\subsection{Explosie}
+Explosie erft alle eigenschappen van object.
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een explosie duratie: \textbf{explosie\_duur}
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan verschijnen
+  \item kan verdwijnen
+  \item kan explosie\_duur veranderen
+\end{enumerate}
+
+
+
+\subsection{Barak}
+De barak erft alle eigenschappen en acties van een object. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een teller
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item de teller laten toenemen bij een spelstap
+  \item een nieuwe samurai laten ontstaan op dezelfde \textbf{positie} als het hok \\
+    wanneer de teller een veelvoud is van een bepaald getal
+    \'en wanneer het aantal samurai op het veld kleiner is dan het aanvankelijke aantal
+\end{enumerate}

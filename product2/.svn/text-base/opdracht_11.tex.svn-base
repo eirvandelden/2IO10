@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 11
+
+\item Druk uit dat de elementen van de logfile bepaald worden door naam en begintijd. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} $ \forall_{l,m} [l,m \in \mathcal{L} \land l \neq m : \neg(n(l) = n(m) \wedge b(l) = b(m))]$  \\
+%\emph{Assessment:}  \\
+
+%\emph{Verbeterd antwoord:}  \\
+%\emph{Redenering:}  \\

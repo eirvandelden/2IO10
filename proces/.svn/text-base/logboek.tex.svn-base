@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Logboek voor Productdocument 2}
+\author{Leroy, Roy, Giso, Etienne, Edin}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+%\section{}
+%\subsection{}
+
+
+%% Leroy Bakker %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Logboek Leroy Bakker}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Naam & Datum & Minuten \\
+\hline
+Leroy Bakker & 01-11-2006 & 285  \\
+Leroy Bakker & 03-11-2006 & 285  \\
+Leroy Bakker & 08-11-2006 & 285  \\
+Leroy Bakker & 09-11-2006 & 180  \\
+Leroy Bakker & 10-11-2006 & 285  \\
+Leroy Bakker & 15-11-2006 & 330 \\
+Leroy Bakker & 16-11-2006 & 285  \\
+
+\hline
+
+
+\hline
+Total & & 1935\\
+\hline
+
+\end{tabular}
+\end{center}
+\label{Logboek Leroy Bakker}
+\end{table}%
+
+%% Roy Berkeveld %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Logboek Roy Berkeveld}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Naam & Datum & Minuten \\
+\hline
+Roy Berkeveld  & 01-11-2006 & 285  \\
+Roy Berkeveld  & 03-11-2006 & 285  \\
+Roy Berkeveld  & 05-11-2006 & 60  \\
+Roy Berkeveld  & 08-11-2006 & 285  \\
+Roy Berkeveld  & 10-11-2006 & 285  \\
+Roy Berkeveld  & 15-11-2006 & 300  \\
+Roy Berkeveld  & 16-11-2006 & 285  \\
+
+\hline
+
+\hline
+Total & & 1785\\
+\hline
+
+\end{tabular}
+\end{center}
+\label{Logboek Roy Berkeveld}
+\end{table}%
+
+%% Giso Dal %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Logboek Giso Dal}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Naam & Datum & Minuten \\
+\hline
+Giso Dal & 01-11-2006 & 285  \\
+Giso Dal & 05-11-2006 & 120  \\
+Giso Dal & 08-11-2006 & 285  \\
+Giso Dal & 09-11-2006 &  60  \\
+Giso Dal & 10-11-2006 & 285  \\
+Giso Dal & 15-11-2006 &  60  \\
+Giso Dal & 16-11-2006 & 285  \\
+\hline
+Total & & 1380 \\
+\hline
+
+\end{tabular}
+\end{center}
+\label{Logboek Giso Dal}
+\end{table}%
+
+
+%% Etienne van Delden %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Logboek Etienne van Delden}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Naam & Datum & Minuten \\
+\hline
+Etienne van Delden & 01-11-2006 & 285  \\
+Etienne van Delden & 02-11-2006 & 60 \\
+Etienne van Delden & 03-11-2006 & 285  \\
+Etienne van Delden & 08-11-2006 & 285  \\
+Etienne van Delden & 10-11-2006 & 285  \\
+Etienne van Delden & 11-11-2006 & 180  \\
+Etienne van Delden & 15-11-2006 & 100 \\
+Etienne van Delden & 16-11-2006 & 240 \\
+\hline
+
+
+\hline
+Total & & 1720\\
+\hline
+
+\end{tabular}
+\end{center}
+\label{Logboek Etienne van Delden}
+\end{table}%
+
+%% Edin Dudojevi\'c %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table}[htdp]
+\caption{Logboek Edin Dudojevi\'c}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Naam & Datum & Minuten \\
+\hline
+Edin Dudojevi\'c & 01-11-2006 & 285  \\
+Edin Dudojevi\'c & 02-11-2006 & 120 \\
+Edin Dudojevi\'c & 03-11-2006 & 285 \\
+Edin Dudojevi\'c & 08-11-2006 & 285 \\
+Edin Dudojevi\'c & 10-11-2006 & 120 \\
+Edin Dudojevi\'c & 13-11-2006 & 80 \\
+Edin Dudojevi\'c & 15-11-2006 & 120 \\
+Edin Dudojevi\'c & 16-11-2006 & 240 \\
+
+
+\hline
+
+
+\hline
+Total & & 1535\\
+\hline
+
+\end{tabular}
+\end{center}
+\label{Logboek Edin Dudojev•c}
+\end{table}%
+
+\end{document}

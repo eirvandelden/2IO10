@@ -1,0 +1,19 @@
+\subsection{Bom}\label{sec:bom} % (fold)
+Eigenschappen:
+\begin{enumerate}
+ \item delay\_teller $\in \mathbb{N}$
+\end{enumerate}
+Acties:
+\begin{enumerate}
+ \item verander\_delay\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+       verander\_delay\_teller(delay\_teller) = (delay\_teller')  \\
+       delay\_teller' = delay\_teller $\oplus$ ( delay\_teller, $i$ ), met $i \in \mathbb{N}$ \\
+ \item verschijn: $(\mathbb{N} \times \mathbb{N}) \times \mathbb{P}(bommen) \rightarrow \mathbb{P}(bommen)$ \\
+       verschijn(taaru\_positie, $bommen$) = ($bommen'$) \\
+       $bommen' = bommen \oplus ( bommen, bommen \cup \{$taaru\_positie$\} )$ \\
+ \item verdwijn: $(\mathbb{N} \times \mathbb{N}) \times \mathbb{P}(bommen) \rightarrow \mathbb{P}(bommen)$ \\
+       verdwijn(bom\_positie, $bommen$) = ($bommen'$) \\
+       $bommen' = bommen \oplus ( $bom\_positie$, \emptyset )$ \\
+\end{enumerate}
+
+% section bom (end)

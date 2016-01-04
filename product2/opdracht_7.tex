@@ -1,0 +1,16 @@
+%% Heroefening ``Wat een werk'', Opdracht 7
+
+\item Druk uit dat twee klussen op een zelfde moment in uitvoering zijn. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} $ \exists_{l,m}[ l,m \in \textbf{K} : : ( b(l) < b(m) < e(l) ) \lor ( b(l) < e(m) < e(l) ) $\\
+\emph{Alternatief Antwoord:} \\
+$\exists_{l,m}[ l,m \in \textbf{K} : : ( (e(l) - b(l) ) \subseteq (e(m) - b(m))  ) \lor ( (e(m) - b(m) ) \subseteq (e(l) - b(l))  ) ) ] $ \\
+%\emph{Assessment:} \\
+
+\emph{Verbeterd Antwoord:} \\
+Neem $k, k' \in \mathcal{K}$ als deze 2 klussen. Dan moet gelden \\
+$\exists_{t, l, l'} [t \in \mathbb{T} \wedge (l, l') \in \mathcal{L}^2 \wedge n(l)=k \wedge n(l')=k' : b(l) \leq t < e(l) \wedge b(l') \leq t < e(l')]$ \\
+\emph{Redenering:} De 2 klussen zijn gegeven, er moet alleen een tijdstip voor bestaan waarop ze tegelijk in uitvoering zijn. \\

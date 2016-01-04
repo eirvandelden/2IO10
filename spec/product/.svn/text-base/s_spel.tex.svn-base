@@ -1,0 +1,13 @@
+\section{Spel}\label{sec:spel} % (fold)
+
+$spel = \{speelveld, taaru, index\}$ \\
+\begin{enumerate}
+\item $index \in \mathbb{N}$
+\item $index\_verhogen: \mathbb{N} \rightarrow \mathbb{N}$ \\
+      $index\_verhogen(index) = (index')$ \\
+      $index' = index \oplus (index, \emph{i})$, met $\emph{i} \in \mathbb{N}$
+\item $starten: begin \rightarrow spel$
+\item $stoppen: spel \rightarrow score\_teller$
+\end{enumerate}
+
+% section spel (end)

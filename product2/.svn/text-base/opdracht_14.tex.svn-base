@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 14
+
+\item Hoe vaak werd $k \in \mathcal{K}$ uitgevoerd voor $l \in \mathcal{L}$? \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:}  $ \# \{$ True $: n(l) = k : 1 \}$ \\
+\emph{Assessment:} Hier staat $1$ als $n(l)=k$, en anders $0$. \\
+
+\emph{Verbeterd antwoord:} $\# \{ l' \in \mathcal{L} ~|~ (n(l') = k) \wedge (l' \preccurlyeq l) \}$ \\
+%\emph{Redenering:}  \\

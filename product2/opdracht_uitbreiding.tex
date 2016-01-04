@@ -1,0 +1,21 @@
+%% De opdracht
+
+De klussen kunnen zo zijn dat ze onafhankelijk van elkaar worden uitgevoerd, maar er kunnen ook klussen zijn die synchronisatie vereisen. Hier betekent zulks dat een klus een moment van gelijktijdige verwerking moet hebben met  \'e\'en gegeven andere klus, zijn synchrone broertje. \\
+Bovendien kunnen er klussen zijn die pas kunnen worden uitgevoerd als sommige andere klussen al uitgevoerd zijn. Die informatie over de klussen kan boven water gehaald worden door toepassing van geschikte functies. Zo is er een deelverzameling $\mathcal{S}$ van synchronisatie eisende klussen en een functie daarop die het synchrone broertje van zulk een synchronisatie eisende klus oplevert en een functie die de verplichte voorgangers geeft:
+
+\begin{center}
+    $\mathcal{S} \subseteq \mathcal{K}, s: \mathcal{S} \rightarrow \mathcal{K}$ en $v: \mathcal{K} \rightarrow \mathbb{P}(\mathcal{K})$
+\end{center}
+
+(Herinner dat $\mathbb{P}(\mathcal{K})$ bestaat uit alle verzamelingen klussen.) \\
+Aanroepen van de bovengenoemde functies zien er bijvoorbeeld uit als:
+
+\begin{center}
+    $s$(plak) = klem en $v$(plak) = \{vind, schuur, knip\}
+\end{center}
+met als intu\"itieve betekenis dat om te mogen plakken eerst een gat gevonden moet worden,
+bovendien dient er eerst te worden geschuurd en een plakker geknipt. Op enig moment tijdens het
+plakken moet er wel (flink hard) geklemd worden.
+\newline
+\newline
+\textbf{Opgave:} formuleer de volgende uitspraken en vragen:

@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 28
+
+\item $\{l : l \in \mathcal{L} : (n(l), \{l' : l' \in \mathcal{L} \wedge n(l) = n(l') : l'\} ) \}$ \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} Geef de rij klussen die ook voorkomen in andere klusuitvoeringen. \\
+\emph{Assessment:} Het is een verzameling tupels, niet een rij klussen. \\
+
+\emph{Verbeterd antwoord:} Geef de verzameling van paren, die bestaan uit een klus met zijn verzameling klusuitvoeringen. \\
+%\emph{Redenering:}  \\

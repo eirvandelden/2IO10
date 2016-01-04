@@ -1,0 +1,17 @@
+%% Heroefening ``Wat een werk'', Opdracht 10
+
+\item Geef predikaten ter formulering van de twee bovengenoemde constraints \textbf{a} en \textbf{b}. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} \\
+\textbf{a:} $(\uparrow t \in \mathbb{T} : : \#\{l \in \mathcal{L} : b(l) \leq t \leq e(l) \}) \leq A$ \\
+\textbf{b:} $ \forall_{x,y}[x,y \in \mathcal{L} \wedge n(x) = n(y) : e(x) \leq b(y) \vee e(y) \leq b(x) ] $ \\
+\emph{Assessment:} \textbf{a} neemt dezelfde fout over uit 9: de eindtijd van een klus telt ook mee voor die uitvoering. \\
+
+% Nakijk commentaar: Klopt na uitleg van Leroy wel, maar ik weet niet of hij goed wordt geteld, vergt veel en lang denkwerk. Etienne
+% Opmerking: is logisch toch echt volledig correct, met uitzondering van de \leq e(l) dan. Roy
+
+\emph{Verbeterd antwoord:} \textbf{a:} $(\uparrow t \in \mathbb{T} :~: \#\{l \in \mathcal{L} : b(l) \leq t < e(l) \}) \leq A$ \\ \\
+%\emph{Redenering:}  \\

@@ -1,0 +1,507 @@
+\documentclass[11pt]{report}
+\usepackage[dutch]{babel}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{textcomp}
+\usepackage[]{hyperref}
+\usepackage{fancyhdr} 
+\pagestyle{fancy} 
+% with this we ensure that the chapter and section 
+% headings are in lowercase. 
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}} 
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}} 
+\fancyhf{} % delete current setting for header and footer 
+\fancyhead[LE,RO]{\bfseries\thepage} 
+\fancyhead[LO]{\bfseries\rightmark} 
+\fancyhead[RE]{\bfseries\leftmark} 
+\renewcommand{\headrulewidth}{0.5pt} 
+\renewcommand{\footrulewidth}{0pt} 
+\addtolength{\headheight}{0.5pt} % make space for the rule 
+\fancypagestyle{plain}
+{ 
+\fancyhead{} % get rid of headers on plain pages 
+\renewcommand{\headrulewidth}{0pt} % and the line 
+}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%%% Commando's overgenomen uit Macrogo.tex %%%
+\newcommand{\cat}{+\!\!\!\!+\:}
+\newcommand{\inr}{< \!\!\!\!\!\! - \:}
+\newcommand{\oo}{{\scriptstyle{\:\circ}\:}}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{opg}[thm]{Opgave}
+\newcommand{\catt}{+\!\!\!+\:}
+
+%%% Het Document %%%
+
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\include{titelblad}
+
+
+\tableofcontents
+
+\chapter{Samenvatting}
+Dit document bevat, naast de standaardonderdelen van een verslag, de antwoorden op de opgaven uit de handout ``Enige mathematische hulpmiddelen''. Het maken van de opgaven heeft inzicht verschaft in de leer van het formeel specificeren en het interpreteren van formele specificaties.
+
+\chapter{Inleiding}
+Het doel van OGO is leren samenwerken aan een project dat qua omvang en benodigde tijd veel groter is dan bijvoorbeeld huiswerk opgaven. De kennis die bij de reguliere vakken is vergaard kan bij OGO in de ``praktijk'' worden toegepast. \\
+
+Omdat dit het eerste project is, kan er geen opgedane kennis worden toegepast, dus ligt de nadruk nu op de training van zogenaamde OGO vaardigheden, zoals vergaderen, notulen maken en plannen. Daarnaast zullen we leren werken met \LaTeX, om nette, wetenschappelijke documenten te maken. \\
+
+Het volgende OGO project gaat over specificeren, vandaar dat er nu tijdens de OGO bijeenkomsten getraind wordt in het opstellen van formele expressies aan de hand van tekstuele beschrijvingen en het in woorden beschrijven van gegeven formele expressies. Hiervoor hebben wij opgaven gemaakt uit de het boekje ``Enkele mathematische hulpmiddelen'' \cite{emh}. \\
+
+
+
+\chapter{De opgaven}
+
+%%%%%%%%%% 1 %%%%%%%%%%
+\section{Rijtjes}
+
+
+
+\textbf{Opgave}
+\begin{enumerate}
+%%%%% Opgave 1 %%%%%
+  \item Geef in goed Nederlands weer wat  de volgende rijtjesexpressies voorstellen \ldots
+    \begin{enumerate}
+      \item $[ a : a \inr ar : 1 ] $ \\
+        \emph{Antwoord:} ``Geef een rij enen voor ieder element in de rij $ar$.'' \\
+        \emph{Verbeterd antwoord:} ``Geef een rij van enen even lang als $ar$.'' \\
+        \emph{Redenering:} Andere formulering om onduidelijkheden te voorkomen. \\
+        
+      \item $[ a: a \inr ar\; \land\; a<0 : a]\cat [a: a \inr ar \:\land \; a>0 : a]$ \\
+        \emph{Antwoord:} ``Geef de rij ar, maar beginnend met alle negatieve elementen van ar en 0
+weglatend.'' \\
+
+      \item $[ i \in \mathbb{N}: 0 \leq 2i\!+\!1<\#ar : ar(2i) * ar(2i\!+\!1)]$ \\
+        \emph{Antwoord:} ``Geef de producten van de opeenvolgende paren elementen uit de rij
+$ar$.'' \\
+		\emph{Verbeterd antwoord:}  ``Geef de producten van de opeenvolgende paren elementen beginnend met een even index uit de rij $ar$.'' \\
+		\emph{Redenering:} Een element mag maar \'e\'en keer in een paar voorkomen. Onze eerste formulering voldeed niet aan deze eis.
+      \end{enumerate}
+      
+  %%%%% Opgave 2 %%%%%
+    \item Geef rijtjesexpressies voor \ldots
+      \begin{enumerate}
+        \item het rijtje nullen in de rij $~ar~$ met hun plaats van voorkomen. \\
+            \emph{Antwoord:} $[ i \in \mathbb{N} : 0 \leq i < \#ar \land ar(i) = 0: ar(i), i]$ \\
+            
+        \item het palindroom dat ontstaat door een rij te spiegelen \\
+            \emph{Antwoord:} $rev(ar) = [ i : 0 \leq i < \#ar : ar(\#ar-1-i)]$
+        \\$ar \cat rev(ar)$\\
+        
+       \item het rits resultaat van twee even lange rijtjes. \\
+        \emph{Antwoord:}$[i \in \mathbb{N} : 0 \leq i < 2 \#ar :$ if $(i$
+mod $2) = 0 \Rightarrow ar(i / 2) \Box (i$ mod $2 ) = 1
+\Rightarrow br((i-1) / 2)]$. \\
+		\emph{Aanname:}$ar$ en $br$ zijn even lang. \\
+	
+        \end{enumerate}
+\end{enumerate}
+
+
+
+%%%%%%%%%% 2 %%%%%%%%%%
+\section{Verzamelingen}
+
+\begin{enumerate}
+%%%%% Opgave 1 %%%%%
+    \item Geef in goed Nederlands weer wat  de volgende verzamelingsexpressies voorstellen \ldots
+
+        \begin{enumerate}
+
+            \item $\{x,y : x^2 + y^2 =1 : x\}$ \\
+                \emph{Antwoord:} ``Een verzameling $x$-en waarvoor geld dat $x^2 + y^2 = 1$'' \\
+                \emph{Verbeterd antwoord:} ``De verzameling $x$-co\"{o}rdinaten die op de eenheidscirkel
+liggen'' .\\
+                \emph{Redenering:} Deze stijl van spreken is meer in de geest van de opgaven.\\
+                
+            \item $X\setminus \{(x,y)\in X\times X : x > y : x\}$ \\
+                \emph{Antwoord:} ``Het kleinste element uit $X$''.\\
+
+            \item $\{ar \in \mathbb{L}(A): \#ar = 5 \:\land\; ar\in VD : \mbox{\textsf{rev}}(ar)\}$,
+            waarbij $A$ het gewone alfabet en $VD$ een woordenboek is.\\
+                \emph{Antwoord:} ``Alle woorden uit woordverzameling $VD$ die uit 5 letters bestaan omgedraaid'' .\\
+                \emph{Verbeterd antwoord:} ``Alle 5-letterwoorden uit het woordenboek, omgedraaid''.\\
+                \emph{Redenering:} De zinsbouw is zo minder gebonden aan de theorie.
+        \end{enumerate}
+
+   %%%%% Opgave 2 %%%%%
+    \item Geef verzamelingsexpressies voor \ldots
+
+          \begin{enumerate}
+            \item alle niet door $13$ of $37$ deelbare gehele getallen. \\
+                \emph{Antwoord:} $\{n \in \mathbb{N} | \neg ( 13 | n \vee 37 | n)\}$ \\
+
+            \item alle gehele getallen die met $481$ vermenigvuldigd  voorkomen
+                  als waarde van een gegeven geheeltallige functie, zeg $\varphi$. \\
+                \emph{Antwoord:} $(\cup ~a \in \mathbb{Z}, n \in \mathbb{Z} : (n \times 481) =
+\varphi(a) : \{n\})$ \\
+
+            \item alle deelverzamelingen van $\mathbb{N}$ waar $13$ wel maar $37$ niet inzit. \\
+                \emph{Antwoord:} $\{av \in \mathbb{P}(\mathbb{N}) : 13 \in av \wedge 37 \notin av :
+av\}$ \\
+        \end{enumerate}
+\end{enumerate}
+
+
+
+%%%%%%%%%% 3 %%%%%%%%%%
+\section{Operaties}
+
+\begin{enumerate}
+    \item Zij $~\Delta = \{ x : : (x,x) \}$ de \emph{identiteit}srelatie of \emph{diagonal}.
+          Wat stellen de volgende relatie expressies voor?
+%%%%% Opgave 1 %%%%%
+        \begin{enumerate}
+
+            \item $(P ; C ; O) ~\cap~ \Delta$ \\
+                \emph{Antwoord:} ``Alle partners van de collega's die een ouder hebben.''\\
+                \emph{Verbeterd antwoord:} ``De personen waarvan de partner een collega is van (\'e\'en of twee van) de ouders van diezelfde persoon.'' \\
+                \emph{Redenering:} Het gaat om dezelfde persoon en niet om een ander persoon. \\
+                
+            \item $P ; P ~\subseteq~ \Delta$ \\
+                \emph{Antwoord:} ``De partner van de partner van alle mensen''.\\
+                \emph{Verbeterd antwoord:} ``De personen die partner zijn van hun partner''.\\
+                \emph{Redenering:} Onze oude formulering zou wijzen op een persoon die werkelijk iedereen ter wereld kent en daar een partner relatie mee zou hebben. Dit is uiteraard niet mogelijk.\\
+
+            \item $\{x,y : x \:(O;O;P)\: y : x\}$ \\
+                \emph{Antwoord:} ``Geef alle personen waarvoor geldt dat ze de grootouders van de
+partner van iemand zijn''.\\
+        \end{enumerate}
+    \item Geef relatie expressies voor taaru no kami 
+  %%%%% Opgave 2 %%%%%
+        \begin{enumerate}
+
+            \item iedereen heeft een partner. \\
+                \emph{Antwoord:} ($\forall x \exists y [ (x,y) \in P : x ]$) \\
+                %$\#[(x,y) \in P : (x,y) \in \Delta : x ] = 0$
+                
+            \item ouders van collegae zijn collegae. \\
+                \emph{Antwoord:} O;C $\subseteq \Delta$  \\
+
+            \item de ouders van mensen die een collega als partner hebben. \\
+                \emph{Antwoord:} $\{x,y : x$ $O;C;P$ $y : x\}$\\
+        \end{enumerate}
+\end{enumerate}
+
+
+
+
+%%%%%%%%%% 4 %%%%%%%%%%
+\section{Functies}
+
+\begin{enumerate}
+    \item Beschrijf wat de volgende functies berekenen \ldots
+  %%%%% Opgave 1 %%%%%
+        \begin{enumerate}
+
+            \item $f: \mathbb{L}(A) \times \mathbb{L}(A)\rightarrow \mathbb{L}(\mathbb{L}(A))~$ gegeven door
+                  \[f((ar,br))=[i : 0\leq i < \#ar\downarrow\#br : [ar(i),br(i)]]\] \\
+                \emph{Antwoord:} ``Geef \emph{i} weer uit de rijen \emph{ar} en \emph{br}, met \emph{i} groter of gelijk aan 0 en kleiner dan de kortste rijlengte (\# ar $\downarrow$ \# br)''. \\
+                \emph{Verbeterd Antwoord:} ``Geef paartjes van \emph{ar(i)} en \emph{br(i)} tot alle elementen van de kortste rij zijn doorgelopen'' \\
+                \emph{Redenering:} Verkeerd idee van de functie van \emph{i}.\\
+
+            \item $g:\mathbb{L}(\mathbb{L}(A))\rightarrow\mathbb{L}(A)~$ gegeven door
+                  \begin{math} [g([ ]) = [ ],~~~g([a])=a~~ \end{math}en \begin{math} ~~g(ar \cat br)=g(ar) \cat g(br) \end{math}  \\
+                \emph{Antwoord:} ``Haal een enkel element uit de rij''. \\
+                \emph{Verbeterd antwoord}:``Geef A''. \\
+                \emph{Redenering:} Het gaat niet om het terug geven van \'e\'en element, maar om alle elementen.
+
+            \item $g \oo f~$ met $~f,g~$ als hierboven. \\
+                \emph{Antwoord:} ``Geef de losse elementen van 2 lijsten, waarbij de \emph{n}-de van \emph{ar} gepaard staat met de \emph{n}-de van \emph{br} tot er geen elementen meer zijn
+voor een van die rijen''\\
+			\emph{Verbeterd antwoord:} ``Geef \emph{ar(i)}, \emph{br(i)}'' \\
+			\emph{Redenering:} Sectie 3.4 Opgave 1b was verkeerd gemaakt, waardoor deze ook verkeerd was.
+  %%%%% Opgave 2 %%%%%
+        \end{enumerate}
+    \item Geef definities van functies die het volgende berekenen \ldots
+
+        \begin{enumerate}
+
+            \item de verzameling grootouders van mensen (gegeven de ouder relatie $~O$). \\
+                \emph{Antwoord:} $f(mens) :  \rightarrow \mathbb{P}(mens)$,
+gegeven door: \\
+$f(y)=\{x: x$O;O:$y: x\}$ \\
+
+            \item de som van alle delers van een natuurlijk getal. \\
+                \emph{Antwoord:} $f: \mathbb{N} \rightarrow \mathbb{N}$, gegeven door: \\
+$f(n) = (+ (x, n) \in \mathbb{N} : x | n : x )$ \\
+
+            \item eindige machtreeksen van een gegeven getal $z$, informeel: $f(n)= z^{0} + ... +  z^{n}$. \\
+                \emph{Antwoord:} $f: \mathbb{N} \times \mathbb{Z} \rightarrow \mathbb{Z}$, gegeven door:\\
+$f(n, z) = ( + (n, z) \in \mathbb{N} \times \mathbb{Z} : : z^{n} )$
+        \end{enumerate}
+\end{enumerate}
+
+
+%%%%%%%%%% 5 %%%%%%%%%%
+\section{Expressies}
+Laat $~arr~$ een rij van rijtjes en $~ars~$ een verzameling van rijtjes van gehele getallen zijn,
+en laat $~ar~$ een rijtje gehele getallen.
+
+\begin{enumerate}
+    \item Beschrijf wat de volgende expressies betekenen \ldots
+%%%%% Opgave 1 %%%%%
+        \begin{enumerate}
+
+            \item $[ar : ar \inr arr : (\uparrow a : a \inr ar : a)]$ \\
+                \emph{Antwoord:} ``Geef een rij met de maxima van ieder rijtje uit \emph{arr}''.\\
+
+            \item $(\downarrow p,q : 0\leq p < q < \#ar\;\land\; (+i : p\leq i < q : ar(i)) \geq 13 : q-p)$ \\
+                \emph{Antwoord:} ``Geef het minimaal aantal elementen dat nodig is om een som van
+aaneengesloten elementen uit ar te krijgen die minstens 13 is''.\\
+
+            \item $(+i : i \in rs : i) / \#rs$, waarbij $~rs=\{ar : ar \in ars : (+a : a \inr ar : a) \}$ \\
+                \emph{Antwoord:} ``Het gemiddelde van alle rijtjes in de verzameling $ars$.''\\
+                \emph{Verbeterd antwoord:} ``Het gemiddelde van alle unieke sommen van alle rijtjes uit $ars$'' .\\
+                \emph{Redenering:} Het volgende werd vergeten: de som ($+i$...) en het ``unieke'': \emph{rs} is een verzameling en in een verzameling worden dubbelen weggehaald.
+
+        \end{enumerate}
+    \item Geef expressies voor de volgende waarden \ldots
+
+        \begin{enumerate}
+ %%%%% Opgave 2 %%%%%
+            \item maximale lengte van enig segment (consecutieve deelrij) van $~ar~$ met louter nullen. \\
+                \emph{Antwoord:} \textbf{if} $\exists_{a}[a \inr ar: a = 0 ] \rightarrow (\uparrow p, q : 0 \leq p < q \leq \#ar \wedge \forall_{i} (i : p \leq i < q \wedge ar(i) = 0 ) : q - p )~ \Box ~ \neg \exists_{a} [a \inr ar: a= 0] \rightarrow 0 $~\textbf{fi} \\
+
+
+            \item vereniging van alle delers van alle rij-elementen van alle rij-elementen van $~arr$. \\
+                \emph{Antwoord:} $\{\cup~a, ar : a \inr ar, ar \inr arr : \{ d \in \mathbb{N} : d | a : d \} \}$ \\
+                
+            \item gemiddelde rijsom van $~ars$. \\
+                \emph{Antwoord:} $(+~ar : ar \in ars : (+a : a \inr ar: a)) / \#ars$ \\
+        \end{enumerate}
+\end{enumerate}
+
+
+%%%%%%%%%% 6 %%%%%%%%%%
+\section{Predikaten}
+
+
+\begin{enumerate}
+    \item Geef de betekenis van de volgende predikaten weer als een Nederlandse zin \ldots
+ %%%%% Opgave 1 %%%%%
+        \begin{enumerate}
+
+            \item $(\forall_{x,y,z} : xRy\;\land\; xRz : y=z)$ \\
+                \emph{Antwoord:} ``Voor alle voorkomens van \emph{y} en \emph{z} die dezelfde relatie met alle voorkomens van \emph{x} handhaven geld, dat \emph{y} en \emph{z} gelijk zijn aan elkaar.'' \\
+
+
+            \item $( \exists_{a,b,c} : a,b,c \in \mathbb{Z} : a^{n} + b^{n} = c^{n} ) \Rightarrow n\leq 2$ \\
+                \emph{Antwoord:} ``Er bestaan waarden voor \emph{a}, \emph{b} en \emph{c} (uit $\mathbb{Z}$) waarvoor geldt $a^{n} + b^{n} = c^{n} \Rightarrow n \leqslant 2$.'' \\
+                \emph{Verbeterd antwoord:}``Als er waarden zijn voor \emph{a, b} en \emph{c} uit $\mathbb{Z}$ waarbij $a^{n} + b^{n} = c^{n}$, dan is \emph{n} kleiner of gelijk aan 2.'' \\
+                 \emph{Redenering:} Het origineel had over het hoofd gezien dat de $\exists$ ophield voor de $\Rightarrow$ en had daardoor een verkeerde interpretatie.\\
+
+            \item $(\uparrow m : m \in M : m)~\mbox{bestaat} \equiv (\exists n  : n \in \mathbb{N} : n\!+\!1 = \# M )$ \\
+                \emph{Antwoord:} ``De maximale waarde van \emph{m} (uit \emph{M}) is gelijkwaardig met de lengte van de rij \emph{M}, waarvan de lengte wordt gedefinieerd als \emph{n} + 1 en \emph{n} $\epsilon$ $\mathbb{N}$.''\\
+            \emph{Verbeterd antwoord:} Wanneer een maximum voor verzameling $M$ bestaat, dan is $M$ geen lege verzameling en vice versa.\\
+            \emph{Redenering:} Het ``bestaat'' was gemist en zorgde voor een verkeerde interpretatie. 
+        \end{enumerate}
+    \item Geef predikaten voor \ldots
+    %%%%% Opgave 2 %%%%%
+        \begin{enumerate}
+            \item een gegeven woord is een palindroom van ten hoogste $13$ letters lang is. \\
+                \emph{Antwoord:} $( \forall ~woord : \#woord \geq 13 \wedge woord \in Palindroom : woord ) $ \\
+                \emph{Verbeterd antwoord:} $\#woord \leq 13 \wedge (\forall i \in \mathbb{N} : 0 \leq i \leq ((\#woord / 2) - 1) \wedge woord(i)=woord(\#woord-1-i))
+                $ \\
+                \emph{Redenering:} Het begrip Palindroom is nu uitgewerkt, verder is de formule een beetje anders opgezet. \\
+
+            \item als een gegeven woord een palindroom bevat dan heeft dat hoogstens $13$ letters. \\
+                \emph{Antwoord:} \textbf{if} $woord \in Palindroom \rightarrow \# woord \leq 13 $ \textbf{fi} \\
+                \emph{Verbeterd antwoord:} $((\forall i \in \mathbb{N} : 0 \leq i < ((\#woord / 2) - 1)) \wedge woord(i)=woord(\#woord-1-i)) \Rightarrow \# woord \leq 13 $ \\
+                \emph{Redenering:} Het begrip ``Palindroom'' is uitgewerkt, verder niets.\\
+
+            \item van een gegeven woord is geen enkel segment met lengte ten minste $14$ een palindroom. \\
+                \emph{Antwoord:} $\exists_{ar} [ar \in W \wedge \#ar \geq 14 : \forall_{ar} [ \neg palindroom(ar)] ]$ \\
+                \emph{Verbeterd antwoord:} $\neg (\exists_{ar} [ar \in seg(W) :   \#ar \geq 14 \wedge \forall_{ar} [$palindroom(ar)$]) $ voor de definitie van palindroom en seg, zie sectie \ref{sec:functies} op \pageref{sec:functies}  \\
+			
+			\emph{Aanname:} \#W $>$ 0
+			\emph{Redenering:} Het begrip ``segment'' en ``palindroom'' zijn hierin geimplementeerd. \\
+        \end{enumerate}
+\end{enumerate}
+
+
+
+
+%%%%%%%%%% 7 %%%%%%%%%%
+\section{Voorbeeldje}
+
+
+\begin{enumerate}
+    \item Geef de betekenis van de volgende expressies weer als een Nederlandse zin \ldots
+%%%%% Opgave 1 %%%%%
+        \begin{enumerate}
+
+            \item $\{k \in V, l \in M, u\in U \: : \: v(u)=\{l\} \land w(u)=\{k\}\: : \: k \}$ \\
+                \emph{Antwoord:} ``Geef alle vrouwen die van een man gewonnen hebben.'' \\
+
+            \item $(\exists_{k} \in\! V, l\in\! M, u \in\! U \: : \: k \in w(u) \land \:l \in v(u)\: : \:
+                    (\forall_{u'}\in U : \#w(u')=1 : l \notin v(u')))$ \\
+                \emph{Antwoord:} ``Voor alle uitslagen van mannen, die uiteindelijk verloren hebben van
+een vrouw.''\\
+
+            \item $(\forall_{k} \in V \: : \: : \: \#(P(k) \cap M) \leq 1)~\land~
+                    (\forall_{l} \in M \: : \: : \: \#(P(l) \cap V) \leq 1)$, waarbij\\
+                    $~P(x) = (\cup \, u : x\in v(u) : v(u)) \cup (\cup \, u : x\in w(u) : w(u))$. \\
+                \emph{Antwoord:} ``Voor alle vrouwen en mannen die maximaal 1x gespeeld hebben.'' \\
+
+        \end{enumerate}
+    \item Geef expressies voor \ldots
+ %%%%% Opgave 2 %%%%%
+        \begin{enumerate}
+
+            \item Alle winnaars hebben ook ooit eens verloren. \\
+                \emph{Antwoord:} $(\forall_{l} \in L, u \in U : l \in w(u) \wedge l \in v(u) : l)$\\
+                \emph{Verbeterd antwoord:}  $(\forall_{l} \in L, u, x \in U : l \in w(u) \wedge l \in v(x) : l)$\\
+
+            \item De leden die  met de meeste andere leden samengespeeld hebben.\footnote{Deze  opgave kan op meerdere wijzen worden opgevat. Wij hebben ervoor gekozen om deze opgave op te vatten als: ``… hoogste aantal (andere) leden hebben samengespeeld…''} \\
+                \emph{Antwoord:} ${x \in L : (\uparrow y \in L (+ : xPy : 1)) = (\uparrow (a, b) \in L (+ : aPb : 1)) : x}$\\
+                \emph{Verbeterd antwoord:} $\{x \in L : (\uparrow y \in L (+ : xPy : 1)) = (\uparrow a \in L (\uparrow b \in L (+ : aPb : 1))): x\}$ \\
+                \emph{Redenering:} Het totaalmaximum ging niet uit van maxima van specifieke
+                partners, het telde alle partners en gaf dat als maximum. \\
+
+            \item De leden hebben niet aan partnerruil gedaan. \\
+                \emph{Antwoord:} $ \forall_{x} [ x \in L :  (\# ~ y \in L: x P y) = 1] $
+        \end{enumerate}
+\end{enumerate}
+
+
+
+\chapter{Conclusie}
+
+Na het individueel maken van de opdrachten zijn deze door de hele groep gezamelijk gecorrigeerd en samengevoegd tot de eerste versie van het productverslag. Deze versie is door de tutor van commentaar voorzien en vervolgens door de groep verbeterd. De meeste fouten zaten initi\"eel in het gedeelte over relatie-expressies. Na een uitleg door de tutor over dit onderdeel en een frisse, kritische blik op deze en de andere in eerste instantie nog niet geheel correcte opgaven, zijn de gecorrigeerde, definitieve antwoorden op papier gezet.
+
+
+\chapter{Begrippenlijst}
+
+%%%%% Hier moet nog aangepast worden, er is voor de betekenis van woorden een aparte environment, de 
+% description envirmont, voorbeeld:
+%\begin{description} 
+%\item[Stupid] things will not 
+%become smart because they are 
+%in a list. 
+%\item[Smart] things, though, can be 
+%presented beautifully in a list. 
+%\end{description} 
+
+% als hier tijd voor is, graag alles hierin aanpassen
+
+\section{Tekens}
+\begin{description}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \item[$\in$]{element van}
+  \item[$\vee$]{of} 
+  \item[$\wedge$]{en}
+  \item[$\equiv$]{equivalent}
+  \item[$\#$ ]{aantal}
+  \item[$\exists$]{er is}
+  \item[$\forall$]{voor alle}
+  \item[$\emptyset$]{lege verzameling}
+  \item[$\neg$]{negatie}
+  \item[$\uparrow$]{maximum}
+  \item[$\downarrow$]{minimum}
+  \item[$\subseteq$]{bevat in}
+  \item[$\circ$]{compositie}
+  \item[$\cup$]{vereniging}
+  \item[$\cap$]{doorsnede}
+  \item[$\setminus$]{verschil}
+  \item[$\times$]{cartesisch product}
+  \item[$\inr$]{bewoner van}
+  \item[$\catt$]{catenatie}
+  \item[$\Delta$]{identiteitsrelatie}
+
+\end{description}
+
+
+\section{Verzamelingen}
+
+\begin{description}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  
+  \item[$\mathbb{L}$]{lijst} \\
+  \item[$\mathbb{P}$]{machtsverzameling} \\
+  \item[$\mathbb{F}$]{eindige verzameling} \\
+  \item[$\mathbb{R}$]{de standaard verzamelingen ree\"ele getallen} \\
+  \item[$\mathbb{Z}$]{de standaard verzamelingen gehele getallen} \\
+  \item[$\mathbb{B}$]{de standaard verzamelingen boolse getallen} \\
+  \item[$\mathbb{N}$]{de standaard verzamelingen natuurlijke getallen} \\
+
+\end{description}
+
+\newpage
+
+\section{Woorden}
+\begin{description}
+
+\item[Bulktypen]{Verzamelingen en rijtjes zijn zogenaamde bulktypen, waarin van een gegeven basistype meerdere exemplaren bijeengegaard zijn}
+\item[Verzamelingen]{Verzamelingen zijn bulks met van elk ding ten hoogste 1 exemplaar}
+\item[Rijtjes]{Rijtjes zijn bulks die per ding meerdere exemplaren mogen hebben, waarbij de volgorde belangrijk is}
+\item[Catenatie]{Het aaneenritsen van twee rijtjes}
+\item[Comprehensie]{Selectie en functietoepassing op de bewoners van die rijtjes gebruiken om de nieuwe rij-bewoners te beschrijven}
+\item[Dummies]{Hulpvariabelen}
+\item[Vereniging]{Catenatie van verzamelingen}
+\item[Compositie]{Het toepassen van een bepaalde functie op een argument}
+\item[Quantificatie]{Het beschrijven van een formule door middel van quantoren $\forall$ en $\exists$}
+\item[Quantor]{Een expressie die het domein van een bepaalde term waaraan het vastzit weer geeft}
+\item[Relaties]{Een verzameling van tupels, rijtjes van elementen, ieder uit een van de verzamelingen waarop de relatie gedefinieerd is.}
+\item[Expressies]{Een collectie van symbolen die samenvoegend een quantiteit beschrijven}
+\item[Functies]{Een relatie of expressie dat een of meer variabelen betrekt}
+\item[Predikaten]{$\mathbb{B}$-waardige functies}
+ \item[Existenti\"ele quantificatie]{Quantificatie waarbij geldt: ``Er bestaat een x die aan P voldoet zo, dat daarvoor Q waar is.''}
+\item[Universele quantificatie]{Quantificatie waarbij geldt: ``Voor alle x waarvoor P waar is, is Q waar.''}
+\item[Propositie]{Een predikaat zonder variabelen}
+\item[Variabele]{Argumenten van een $\mathbb{B}$-waardige functie}
+\item[Consecutieve rij]{Een aaneengesloten rij}
+\item[Tupel]{groepering van variabelen}
+\end{description}
+
+\section{Functies}
+\begin{description}
+\label{sec:functies}
+
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  \item[$succ$]{geeft de opvolger} \\
+  \item[\lbrack$\cdot $ \rbrack]{geeft een rij aan} \\
+  \item[\lbrack \rbrack]{een lege rij}
+  \item[$\pi_{2}$]{$2^{de}$ in een tupel} \\
+  \item[$fib$]{rij van Fibonacci} \\
+  \item[$avg$]{gemiddelde van een lijst} \\
+  \item[$0^{\bullet}$]{altijd nul} \\
+  \item[$dkr$]{dubbel kwadraten rij} \\
+  \item[$rev$]{keer een rij om} \\
+  \item[$dkv$]{dubbel kwadraten verzameling} \\
+  \item[$set$]{de verzameling gemaakt uit een gegeven rij} \\
+  \item[$seg$]{$\{p, q : 0 \leq p < q < \#W : [i : p \leq i \leq q : W(i)]\} $\\
+  geeft alle consecutieve deelrijen uit de opgegeven rij}\\
+  \item[$palindroom$]{$\forall_{i} [i \in \mathbb{N} : 0  \leq i \leq (\#ar / 2) - 1 \wedge W(i) = W(\# W - i - 1)] ]$ \\
+  boolse functie die controleert op het zijn van een palindroom} \\
+
+\end{description}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{} Handout Projectwijzer OGO 1.1, 2006-2007
+\bibitem{emh} Handout Enige wiskundige hulpmiddelen, 2006-2007
+\bibitem{} Tobias Oetiker, Hubert Partl. Irene Hyna, Elisabeth Schlegl,
+The Not So Short Introduction To Latex, 2006
+\bibitem{} Rob Nederpelt, Fairouz Kamareddine, Logical Reasoning: A First
+Course, King's College Publications, London, 2004
+
+\end{thebibliography}
+
+
+
+
+\end{document}  

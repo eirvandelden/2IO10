@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 22
+
+\item Geef voor alle klussen in $S$ de voorgangers van hun sychrone broertje. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} $(\cup ~ k \in \mathcal{S} : ~ : v(s(k)) )$ \\
+%\emph{Assessment:}  \\
+
+%\emph{Verbeterd antwoord:}  \\
+%\emph{Redenering:}  \\

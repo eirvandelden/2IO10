@@ -1,0 +1,12 @@
+%% Heroefening ``Wat een werk'', Opdracht 20
+
+\item Geef het gehele voorgeslacht van een klus. \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} $vr(k)$, waarbij $vr: \mathcal{K} \rightarrow \mathbb{P}(\mathcal{K})$, gegeven door $vr(k) = (\cup ~ k' : k' \in v(k) : \{k'\} \cup vr(k'))$. \\
+%\emph{Assessment:}  \\
+
+%\emph{Verbeterd antwoord:}  \\
+%\emph{Redenering:}  \\

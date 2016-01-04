@@ -1,0 +1,78 @@
+
+\subsection{Taaru no Kizoku}\label{sub:taaru_no_kizoku} % (fold)
+Eigenschappen:
+\begin{enumerate}
+    \item \textbf{taaru} $\in objecten $
+    \item \textbf{flaming} $\in \mathbb{B}$
+    \item score $\in \mathbb{N}$
+    \item sushi\_teller $\in \mathbb{N}$
+    \item potion\_teller $\in \mathbb{N}$
+    \item levens\_teller $\in \mathbb{N}$
+\end{enumerate}
+Acties:
+\begin{enumerate}
+    \item verander sushi\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+ verander sushi\_teller(sushi\_teller) = (sushi\_teller') \\
+ sushi\_teller' = sushi\_teller $\oplus$ (sushi\_teller, $i$), met $i \in \mathbb{N}$ \\
+    \item verander potion\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+verander potion\_teller(potion\_teller) = (potion\_teller') \\
+potion\_teller' = potion\_teller $\oplus$ (potion\_teller, $i$), met $i \in \mathbb{N}$ \\
+    \item verander score\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+verander score\_teller(score\_teller) = (score\_teller') \\
+score\_teller' = score\_teller $\oplus$ (score\_teller, $i$), met $i \in \mathbb{N}$ \\
+    \item
+    \item
+    \item
+
+\end{enumerate}
+
+
+
+
+%$taaru.toestand \in \{flaming, niet\}$ \\
+%$taaru.flamingteller \in \mathbb{N}$ \\
+%$taaru.score \in \mathbb{N}$ \\
+%$taaru.numsushis \in \mathbb{N}$ \\
+%$taaru.numpotions \in \mathbb{N} \land taaru.numpotions \leq 4$ \\
+%$taaru.levens \in \mathbb{N}$ \\
+%\\
+%$taaru.maak\_potion: (taaru.numpots, taaru.numsushis) \rightarrow (taaru.numpots', taaru.numsushis')$ \\
+%  $taaru.numpots' = taaru.numpots \oplus ()$ \\
+%  $taaru.numsushis' = taaru.numsushis \oplus ()$ \\
+%\\
+%%$taaru.gebruik_manapot: (taaru.numpots, taaru.) \rightarrow (taaru)$ \\
+%$taaru.eet: (taaru.numsushis, taaru.toestand, taaru.score, eten) \rightarrow \\ (taaru.numsushis', taaru.score', taaru.toestand')$ \\
+%  $taaru.numsushis' = taaru.numsushis \oplus ()$ \\
+%  $taaru.score' = taaru.score \oplus ()$ \\
+%\\
+%%$taaru.spelstap: () \rightarrow (taaru')$ \\
+%$taaru.nietflaming: (taaru.toestand) \rightarrow (taaru.toestand')$ \\
+%  $taaru.toestand' = taaru.toestand \oplus niet$ \\
+%\\
+%$taaru.plaats\_kleine\_bom: (taaru.positie, taaru.numpots, kleine\_bommen) \rightarrow \\ (taaru.numpots', kleine\_bommen')$ \\
+%  $taaru.numpots' = taaru.numpots \oplus (taaru.numpots - 1)$ \\
+%  $kleine\_bommen' = kleine\_bommen \oplus (kleine\_bommen \cup \{b \in _kleine\_bommen : b.positie = taaru.positie \land b.afgaanteller = 15 : b\})$ \\
+%\\
+%$taaru.plaats\_grote\_bom: (taaru.positie, taaru.numpots, grote\_bommen) \rightarrow (taaru', grote\_bommen')$ \\
+%  $taaru.numpots' = taaru.numpots \oplus (taaru.numpots - 2)$ \\
+%  $grote\_bommen' = grote\_bommen \oplus (grote\_bommen \cup \{b \in _grote\_bommen : b.positie = taaru.positie \land b.afgaanteller = 15 : b\})$ \\
+%\\
+%$taaru.spring: (taaru.numpots, aardbevingen) \rightarrow (taaru.numpots', aardbevingen')$ \\
+%  $taaru.numpots' = taaru.numpots \oplus (taaru.numpots - 3)$ \\
+%  $aardbevingen' = aardbevingen \oplus (aardbevingen \cup \{a \in _aardbevingen : true : a\})$ \\
+%\\
+%$taaru.sterf: (taaru.positie, speelveld.startpositie, taaru.levens, taaru.numpotions, \\ taaru.toestand, taaru.gebeurtenissen) \rightarrow (taaru.positie', taaru.levens',  taaru.numpotions', \\ taaru.toestand', gebeurtenissen')$ \\
+%  $taaru.positie' = taaru.positie \oplus speelveld.startpositie$ \\
+%  $taaru.levens' = taaru.levens \oplus (taaru.levens - 1)$ \\
+%  $taaru.numpotions' = taaru.numpotions \oplus ()$ \\
+%  $taaru.toestand' = taaru.toestand \oplus niet$
+%\\
+%$taaru.bots\_met\_samurai: (taaru) \rightarrow (taaru')$ \\
+%\\
+%$taaru.bestuur: (taaru) \rightarrow (taaru')$ \\
+%\\
+%$taaru.win_level: (taaru) \rightarrow (taaru')$ \\
+%\\
+
+
+% subsection taaru_no_kizoku (end)

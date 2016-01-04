@@ -1,0 +1,111 @@
+
+%\includegraphics[width=20cm,angle=90]{overerving_objecten}
+
+\subsection{Object}
+Een \textbf{object} heeft bepaalde eigenschappen.
+
+Eigenschappen:
+\begin{enumerate}
+\item Een \textbf{object} heeft een \textbf{positie} op het looppad.
+\end{enumerate}
+
+
+\subsection{Bewegend object}
+Een \textbf{bewegend object} erft alle eigenschappen van een \textbf{object}. \\
+Extra eigenschappen:
+\begin{enumerate}
+  \item heeft een \textbf{snelheid}
+  \item heeft een \textbf{richting}
+\end{enumerate}
+Extra acties:
+\begin{enumerate}
+  \item kan van \textbf{positie} veranderen
+  \item kan van \textbf{snelheid} veranderen
+  \item kan van \textbf{richting} veranderen
+\end{enumerate}
+
+\subsubsection{Taaru}
+Het object \textbf{taaru} erft alle eigenschappen en acties van een \textbf{bewegend object}. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een toestand: \textbf{flaming}
+  \item heeft een \textbf{flamingduratie}
+  \item heeft een \textbf{score}
+  \item heeft een teller voor het aantal gegeten \textbf{sushi}'s: \textbf{sushi\_teller}
+  \item een teller voor het aantal \textbf{potions}: \textbf{potion\_teller}
+  \item heeft een teller voor het aantal \textbf{levens}: \textbf{levens\_teller}
+
+\end{enumerate}
+Acties:
+\begin{enumerate}
+%\textbf{eten}
+  \item kan \textbf{sushi\_teller} veranderen
+  \item kan \textbf{potion\_teller} veranderen
+  \item kan \textbf{score} veranderen
+  \item kan \textbf{flaming} veranderen
+  \item kan \textbf{flaming\_duratie} veranderen
+  \item kan \textbf{levens\_teller} veranderen
+
+\end{enumerate}
+
+\subsubsection{Samurai}
+Samurai erven alle eigenschappen en acties van een \textbf{bewegend object}. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een teller voor het stilstaan: \textbf{stilstaan\_duur}
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan \textbf{verdwijnen} van het spel
+  \item kan \textbf{stilstaan\_duur} veranderen
+\end{enumerate}
+
+\subsection{Eten}
+Eten erft alle eigenschappen van een \textbf{object}. \\
+Eigenschappen:
+\begin{enumerate}
+ \item is een sushi of een wasabi
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan \textbf{verdwijnen}
+\end{enumerate}
+
+\subsection{Bommen}
+\textbf{Bommen} erven alle eigenschappen een \textbf{object}. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een teller voor het afgaan: \textbf{delay\_teller}
+  \item is een kleine\_bom of een grote\_bom
+\end{enumerate}
+
+Acties:
+\begin{enumerate}
+  \item kan \textbf{delay\_teller} veranderen
+  \item kan \textbf{verschijnen}
+  \item kan \textbf{verdwijnen}
+\end{enumerate}
+
+\subsection{Explosie}
+\textbf{Explosie} erft alle eigenschappen van \textbf{object}.
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een explosie duratie: \textbf{explosie\_duur}
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan \textbf{verschijnen}
+  \item kan \textbf{verdwijnen}
+  \item kan \textbf{explosie\_duur} veranderen
+\end{enumerate}
+
+\subsection{Barak}
+De \textbf{barak} erft alle eigenschappen van een \textbf{object}. \\
+Eigenschappen:
+\begin{enumerate}
+  \item heeft een \textbf{teller}
+\end{enumerate}
+Acties:
+\begin{enumerate}
+  \item kan \textbf{teller} veranderen
+\end{enumerate}

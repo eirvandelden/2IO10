@@ -1,0 +1,12 @@
+%% De bibliografie (verzameling gebruikte werken)
+
+\begin{thebibliography}{99}
+
+\bibitem{} Handout Projectwijzer OGO 1.1, 2006-2007
+\bibitem{emh} Handout Enige wiskundige hulpmiddelen, 2006-2007
+\bibitem{} Tobias Oetiker, Hubert Partl. Irene Hyna, Elisabeth Schlegl,
+    The Not So Short Introduction To Latex, 2006
+\bibitem{} Rob Nederpelt, Fairouz Kamareddine, Logical Reasoning: A First
+    Course, King's College Publications, London, 2004
+
+\end{thebibliography}

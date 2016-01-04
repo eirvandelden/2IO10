@@ -1,0 +1,52 @@
+%% productdocument 1, opgave 3 (Operaties)
+
+Zij $~\Delta = \{ x : : (x,x) \}$ de \emph{identiteit}srelatie of \emph{diagonal}.
+
+\begin{enumerate}
+
+%%%%% Deelopgave 3.1 %%%%%
+\item Wat stellen de volgende relatie expressies voor?
+\begin{enumerate}
+
+    \item $(P ; C ; O) ~\cap~ \Delta$ \\
+        % \emph{Antwoord:} ``Alle partners van de collega's die een ouder hebben.''\\
+        \emph{Antwoord:} ``De personen waarvan de partner een collega is van (\'e\'en of twee van) de ouders van diezelfde persoon.'' \\
+        \emph{Verbeterd antwoord:} ``De personen waarvan een partner een collega is van (\'e\'en of twee van) de ouders van diezelfde persoon.'' \\
+        \emph{Redenering:} Het gaat om dezelfde persoon en niet om een ander persoon. \\
+
+    \item $P ; P ~\subseteq~ \Delta$ \\
+        %orig 1: \emph{Antwoord:} ``De partner van de partner van alle mensen''.\\
+        %orig 1: \emph{Verbeterd antwoord:} ``De personen die partner zijn van hun partner''.\\
+        %orig 1: \emph{Redenering:} Onze oude formulering zou wijzen op een persoon die werkelijk iedereen ter wereld kent en daar een partner relatie mee zou hebben. Dit is uiteraard niet mogelijk.\\
+        % \emph{Antwoord:} ``De personen die partner zijn van hun partner''.\\
+        \emph{Antwoord:} ``Iedereen heeft een partner.'' \\
+        \emph{Verbeterd antwoord:} ``De partner-relatie is symmetrisch.'' \\
+
+
+    \item $\{x,y : x \:(O;O;P)\: y : x\}$ \\
+        \emph{Antwoord:} ``Geef alle personen waarvoor geldt dat ze de grootouders van de partner van iemand zijn''.\\
+        \emph{Antwoord:} ``Geef alle personen waarvoor geldt dat ze een grootouder van de partner van iemand zijn''.\\
+
+\end{enumerate}
+
+%%%%% Deelopgave 3.2 %%%%%
+\item Geef relatie-expressies voor \ldots
+\begin{enumerate}
+
+    \item iedereen heeft een partner. \\
+        %orig 1: \emph{Antwoord:} ($\forall x \exists y [ (x,y) \in P : x ]$) \\
+        %$\#[(x,y) \in P : (x,y) \in \Delta : x ] = 0$
+        %orig 1: \emph{Verbeterd antwoord:} $\forall x \exists y [ (x,y) \in P]$ \\
+        \emph{Antwoord:} $\forall_{x} \exists_{y} [ (x,y) \in P]$ \\
+
+    \item ouders van collegae zijn collegae. \\
+        \emph{Antwoord:} O;C $\subseteq \Delta$  \\
+        \emph{Verbeterd antwoord:} $C;O;C;O^{\leftarrow} \subseteq \Delta$ \\
+
+    \item de ouders van mensen die een collega als partner hebben. \\
+        %orig 1: \emph{Antwoord:} $\{x,y : x$ $O;C;P$ $y : x\}$\\
+        \emph{Antwoord:} $\{x,y : x$ $O;C;P$ $y : x\}$\\
+        \emph{Verbeterd antwoord:} $\{x, y : x O y \wedge y P;C y : x \}$
+
+\end{enumerate}
+\end{enumerate}

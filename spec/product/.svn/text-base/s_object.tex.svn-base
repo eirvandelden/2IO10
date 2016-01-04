@@ -1,0 +1,152 @@
+\section{Objecten}\label{sub:looppad} % (fold)
+\begin{enumerate}
+ \item $objecten = bewegend \cup eten \cup bommen \cup explosies \cup barak$ \\
+\end{enumerate}
+
+In de volgende specificaties wordt bij bepaalde functies gebruik gemaakt van <object>.<eigenschap>, waarbij <object> is meegegeven bij de functie en <eigenschap> deel uitmaakt van de gespecificeerde tupels van het <object>. Bijvoorbeeld positie.x in de eerstvolgende functie. Positie is meegegeven en bestaat uit een x- en y-co\"ordinaat die door positie.x en positie.y kunnen worden gebruikt.
+
+\subsection{Bewegend object}\label{sec:beweging} % (fold)
+
+
+\emph{bewegend} = \{ (x, y) $|$ x = ( bewegend $\lor$ stilstaand ) $\land$ \\  \indent \indent \indent \indent y = ( noord $\lor$ oost $\lor$ zuid $\lor$ west )\} \\ \\
+loop\_naar\_noord: $looppad \rightarrow looppad$ \\
+loop\_naar\_noord(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = (positie.x, (positie.y)+1) als (positie.x, (positie.y)+1) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y) \\ \\
+loop\_naar\_oost: $looppad \rightarrow looppad$ \\
+loop\_naar\_oost(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = ((positie.x)+1, positie.y) als ((positie.x)+1, positie.y) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y) \\ \\
+loop\_naar\_zuid: $looppad \rightarrow looppad$ \\
+loop\_naar\_zuid(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = (positie.x, (positie.y)-1) als (positie.x, (positie.y)-1) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y) \\ \\
+loop\_naar\_west: $looppad \rightarrow looppad$ \\
+loop\_naar\_west(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = ((positie.x)-1, positie.y) als ((positie.x)-1, positie.y) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y)
+
+\subsubsection{Taaru}\label{sub:taaru_no_kizoku} % (fold)
+
+\emph{taaru} = \{ (x, positie, flaming, flaming\_duratie, score\_teller, sushi\_teller, potion\_teller, levens\_teller) \begin{math} | x \in \emph{bewegend} \land  positie \in \emph{looppad} \land \\
+  \indent \indent \indent \indent flaming \in \mathbb{B} \land  flaming\_duratie \in \mathbb{N} \land \\  \indent \indent \indent \indent score\_teller \in \mathbb{N} \land sushi\_teller \in \mathbb{N} \land \\  \indent \indent \indent \indent potion\_teller \in \mathbb{N} \land levens\_teller \in \mathbb{N} \}
+\end{math} \\
+
+Acties:
+\begin{enumerate}
+    \item verander flaming: $\mathbb{P}(taaru) \times \mathbb{B} \rightarrow \mathbb{P}(taaru) $ \\
+verander flaming($taaru$, bool) = ($taaru$') \\
+$taaru$' = $taaru$ $\oplus$ ($taaru$, ( taaru.x, taaru.positie, bool, taaru.flaming\_duratie, \ldots, taaru.levens\_teller)), met $bool \in \mathbb{B}$ \\
+    \item verander flaming\_duratie:  $\mathbb{P}(taaru) \times \mathbb{N} \rightarrow \mathbb{P}(taaru) $ \\
+    verander flaming\_duratie($taaru$, duratie) = ($taaru$') \\
+    $taaru$' = $taaru$ $\oplus$ ($taaru$, ( taaru.x, taaru.positie, taaru,flaming, duratie, taaru.score\_teller, \ldots, taaru.levens\_teller)), met $duratie \in \mathbb{N}$ \\
+     \\  \item verander score\_teller: $\mathbb{P}(taaru) \times \mathbb{N} \rightarrow \mathbb{P}(taaru)$ \\
+    verander score\_teller($taaru$, score) = ($taaru$') \\
+    $taaru$' = $taaru$ $\oplus$ ($taaru$, ( taaru.x, \ldots , taaru.duratie, score, taaru.sushi\_teller \ldots, taaru.levens\_teller)), met $score \in \mathbb{N}$ \\
+
+\item verander sushi\_teller: $\mathbb{P}(taaru) \times \mathbb{N} \rightarrow \mathbb{P}(taaru)$ \\
+    verander sushi\_teller($taaru$, sushi) = ($taaru$') \\
+    $taaru$' = $taaru$ $\oplus$ ($taaru$, ( taaru.x, \ldots , taaru.score, sushi, taaru.potion\_teller, taaru.levens\_teller)), met $sushi \in \mathbb{N}$ \\
+    \item verander potion\_teller: $\mathbb{P}(taaru) \times \mathbb{N} \rightarrow \mathbb{P}(taaru)$ \\
+    verander potion\_teller($taaru$, potion) = ($taaru$') \\
+    $taaru$' = $taaru$ $\oplus$ ($taaru$, ( taaru.x, \ldots , taaru.sushi\_teller, potion, taaru.levens\_teller)), met $potion \in \mathbb{N}$ \\
+
+    \item verander levens\_teller: $\mathbb{P}(taaru) \times \mathbb{N} \rightarrow \mathbb{P}(taaru)$ \\
+    verander levens\_teller($taaru$, levens) = ($taaru$') \\
+    $taaru$' = $taaru$ $\oplus$ ($taaru$, ( taaru.x, \ldots , taaru.potion\_teller, levens)), met $levens \in \mathbb{N}$ \\
+
+\end{enumerate}
+
+% subsection taaru_no_kizoku (end)
+
+
+\subsubsection{Samurais}\label{sec:samurai} % (fold)
+
+\emph{samurais} = \{ (x, positie, stilstaan\_duur) $|$ (x $\in$ \emph{bewegend}) $\land$ (positie $\in$ \emph{looppad}) $\land$ (stilstaan\_duur $\in \mathbb{N})$ \}\\ \\
+
+
+Acties:
+\begin{enumerate}
+  \item verdwijn: $\mathbb{P}$(\emph{samurais}) $\times$ \emph{looppad} $\rightarrow$ $\mathbb{P}$(\emph{samurais}') \\
+  verdwijn (\emph{samurais}, positie') = (\emph{samurais}') \\
+  \emph{samurais}' = \emph{samurais} $\backslash$ \{x, positie, stilstaan\_duur $|$ positie = positie'\}
+  \item verander stilstaan\_duur: $\mathbb{P}$(samurais) $\times$ $\mathbb{N}$ $\rightarrow$ $\mathbb{P}$(samurais) \\
+  verander stilstaan\_duur (\emph{samurais}, nieuwe\_duur) = (samurais') \\
+  \emph{samurais'} = stilstaan\_duur $\oplus$ (samurais, (samurais.x, samurais, positie,  nieuwe\_duur)
+\end{enumerate}
+
+
+% section beweging (end)
+
+
+\subsection{Eten}\label{sub:eten} % (fold)
+\emph{eten} = \{ (soort, positie) $|$ soort = ( sushi $\lor$ wasabi) $\land$ positie $\in$ \emph{looppad} \} \newline
+
+Acties:
+\begin{enumerate}
+  \item verdwijn: $\mathbb{P}$(eten) $\times$ \emph{looppad} $\rightarrow$ $\mathbb{P}$(eten) \\
+  verdwijn (\emph{eten}, eten\_positie) = (\emph{eten}') \\
+  \emph{eten}' = \emph{eten} $\oplus$ (eten\_positie, $\emptyset$)
+
+\end{enumerate}
+\ \\
+\emph{sushi} = \{ (soort, positie) $\in eten |$ (soort = sushi) \} \\
+\emph{wasabi} = \{ (soort, positie) $\in eten |$ (soort = wasabi)  \}
+
+
+
+% subsection eten (end)
+
+
+
+\subsection{Bommen}\label{sec:bom} % (fold)
+\emph{bommen} = \{ (soort, delay\_teller, positie) $|$ soort = (klein $\lor$ groot) $\land$ delay\_teller $\in \mathbb{N}$ $\land$ positie $\in looppad$ \} \\
+$kleine\_bommen$ = \{ (soort, delay\_teller, positie) $\in bommen |$ (soort = $klein$) \} \\
+$grote\_bommen$ = \{ (soort, delay\_teller, positie) $\in bommen |$ (soort = $groot$)  \} \\
+
+
+Acties:
+\begin{enumerate}
+ \item verander delay\_teller: $\mathbb{P}(bommen) \times \mathbb{N}  \rightarrow \mathbb{N}$ \\
+       verander delay\_teller($bommen$, $i$) = ($bommen$')  \\
+       $bommen'$ = $bommen$ $\oplus$ ( $bommen$, ( bommen.soort, $i$, bommen.positie ) ), met $i \in \mathbb{N}$ \\
+ \item verschijn: $\mathbb{P}(bommen) \times looppad  \rightarrow \mathbb{P}(bommen)$ \\
+       verschijn($bommen$, positie) = ($bommen'$) \\
+       $bommen' = bommen \oplus ( bommen, $$(bommen.soort, bommen.delay\_teller, $positie$ )$ \\
+ \item verdwijn: $ \mathbb{P}(bommen)\rightarrow \mathbb{P}(bommen)$ \\
+       verdwijn( $bommen$ = ($bommen'$) \\
+       $bommen' = bommen \oplus ( bommen,$ ( bommen.soort, bommen.delay\_teller, $\emptyset ) )$ \\
+\end{enumerate}
+
+% section bom (end)
+
+\subsection{Explosies}\label{sub:explosie} % (fold)
+
+\emph{explosies} = \{ (positie, duur) $|$ (positie $\in looppad) \land$ (duur $\in \mathbb{N}$) \}
+
+
+Acties:
+\begin{enumerate}
+ \item verschijn: $looppad \times \mathbb{P}$(explosies) $\rightarrow \mathbb{P}$(explosies) \\
+       verschijn(explosie.positie, $explosies$) = ($explosies'$) \\
+       $explosies'$ = $explosies \oplus ( explosies, explosies \cup \{ ( $explosie.positie$, $i$ )  \} )$, met $i \in \mathbb{N}$ \\
+ \item verdwijn: $looppad\times \mathbb{P}($explosies) $\rightarrow \mathbb{P}($explosies) \\
+       verdwijn(explosie.positie, $explosies$) = ($explosies'$) \\
+       $explosies'$ = $explosies \oplus ( explosies, explosies \setminus \{  ($explosie\_positie$, $i$) \} )$, met $i \in \mathbb{N}$ \\
+ \item verander duur: $\mathbb{P}( explosies ) \rightarrow \mathbb{P}(explosies)$ \\
+       verander duur(explosie) = (explosie') \\
+       explosie' = explosie $\oplus$ (explosie, ( explosie.positie, $i$) ), met $i \in \mathbb{N}$ \\
+\end{enumerate}
+
+\subsection{Barak}\label{sub:barak} % (fold)
+
+\emph{barak} = \{ ( positie, teller ) $|$ positie $\in looppad \land$ teller $\in \mathbb{N}$ \} \\
+
+\begin{enumerate}
+    \item verander teller: $barak \rightarrow barak$ \\
+ verander teller(barak, $i$) = (barak') \\
+ barak' = teller $\oplus$ (barak, (barak.positie, \emph{i})), met  \emph{i} $\in \mathbb{N}$\\
+\end{enumerate}
+
+
+% subsection barak (end)

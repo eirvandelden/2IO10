@@ -1,0 +1,29 @@
+\documentclass[11pt]{article}
+\usepackage{amssymb}
+
+\title{Agenda vergadering OGO 1.1}
+\author{G.H. Dal}
+
+\date{15-11-2006, 15:00}
+
+\begin{document}
+
+\maketitle
+
+\section{Agendapunten}
+
+\begin{itemize}
+\item Voortgang opgaven productdocument 2 \\
+\item \emph{Correcties doorvoeren}\\
+\item \emph{Afronding Proces Document}\\\\
+\item Nieuwe planning voor behalen van definitieve deadline\\
+\item Opmerkingen over de aanpak - moeilijkheden, SVN \\
+\end{itemize}
+
+\section{Verdere mededelingen}
+\begin{itemize}
+\item Tutor \\
+\item Leden \\
+\end{itemize}
+
+\end{document}

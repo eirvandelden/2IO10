@@ -1,0 +1,132 @@
+\section{Objecten}\label{sub:looppad} % (fold)
+\begin{enumerate}
+ \item $objecten = bewegend \cup eten \cup bommen \cup explosies \cup barakken$ \\
+\end{enumerate}
+
+\subsection{Bewegend object}\label{sec:beweging} % (fold)
+
+$bewegend = taarus \cup samurais$ \\ \\
+bewegend = \{ (x, y) $|$ x = ( bewegend $\lor$ stilstaand ) $\land$ \\  \indent \indent \indent \indent y = ( noord $\lor$ oost $\lor$ zuid $\lor$ west )\} \\ \\
+loop\_naar\_noord: $looppad \rightarrow looppad$
+loop\_naar\_noord(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = (positie.x, positie.y+1) als (positie.x, positie.y+1) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y) \\ \\
+loop\_naar\_oost: $looppad \rightarrow looppad$
+loop\_naar\_oost(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = (positie.x+1, positie.y) als (positie.x+1, positie.y) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y) \\ \\
+loop\_naar\_zuid: $looppad \rightarrow looppad$
+loop\_naar\_zuid(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = (positie.x, positie.y-1) als (positie.x, positie.y-1) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y) \\ \\
+loop\_naar\_west: $looppad \rightarrow looppad$
+loop\_naar\_west(positie) = (positie') \\
+positie' = positie $\oplus$ (positie, (x,y) ), met: \\
+(x,y) = (positie.x-1, positie.y) als (positie.x-1, positie.y) $\in$ \emph{looppad} en anders (x, y) = (positie.x, positie.y)
+
+\subsubsection{Taarus}\label{sub:taaru_no_kizoku} % (fold)
+
+
+taarus = \{ (x, positie, flaming, flaming\_duratie, score\_teller, sushi\_teller, potion\_teller, levens\_teller) \begin{math} | x \in \emph{bewegend} \land  positie \in \emph{looppad} \land \\
+  \indent \indent \indent \indent flaming \in \mathbb{B} \land  flaming\_duratie \in \mathbb{N} \land \\  \indent \indent \indent \indent score\_teller \in \mathbb{N} \land sushi\_teller \in \mathbb{N} \land \\  \indent \indent \indent \indent potion\_teller \in \mathbb{N} \land levens\_teller \in \mathbb{N} \}
+\end{math} \\
+
+Acties:
+\begin{enumerate}
+    \item verander flaming: $\mathbb{B} \rightarrow \mathbb{B}$ \\
+verander flaming(flaming) = (flaming') \\
+flaming' = flaming $\oplus$ (flaming, $i$), met $i \in \mathbb{B}$ \\ \item verander flaming\_duratie: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+verander flaming\_duratie(flaming\_duratie) = (flaming\_duratie') \\  \item verander score\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+verander score\_teller(score\_teller) = (score\_teller') \\
+score\_teller' = score\_teller $\oplus$ (score\_teller, $i$), met $i \in \mathbb{N}$ \\
+flaming\_duratie' = flaming\_duratie $\oplus$ (flaming\_duratie, $i$), met $i \in \mathbb{N}$ \\
+
+\item verander sushi\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+ verander sushi\_teller(sushi\_teller) = (sushi\_teller') \\
+ sushi\_teller' = sushi\_teller $\oplus$ (sushi\_teller, $i$), met $i \in \mathbb{N}$ \\
+    \item verander potion\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+verander potion\_teller(potion\_teller) = (potion\_teller') \\
+potion\_teller' = potion\_teller $\oplus$ (potion\_teller, $i$), met $i \in \mathbb{N}$ \\
+
+    \item verander levens\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+verander levens\_teller(levens\_teller) = (levens\_teller') \\
+levens\_teller' = levens\_teller $\oplus$ (levens\_teller, $i$), met $i \in \mathbb{N}$ \\
+
+\end{enumerate}
+
+% subsection taaru_no_kizoku (end)
+
+
+\subsubsection{Samurais}\label{sec:samurai} % (fold)
+
+samurais = \{ (x, positie, stilstaan\_duur) $|$ x $\in$ bewegend $\land$ positie $\in$ looppad $\land$ stilstaan\_duur $\in \mathbb{N}$ \}\\ \\
+\emph{samurais}: (\emph{looppad}) $\rightarrow$ $\mathbb{P}$(\emph{samurais}) \\
+
+Acties:
+\begin{enumerate}
+  \item verdwijn: $\mathbb{P}$(\emph{samurais}) $\times$ \emph{looppad} $\rightarrow$ $\mathbb{P}$(\emph{samurais}') \\
+  verdwijn (\emph{samurais}, positie) = (\emph{samurais}') \\
+  \emph{samurais}' = \emph{samurais} $\oplus$ (positie, $\emptyset$)
+  \item verander\_stilstaan\_duur: $\mathbb{P}$(stilstaan\_duur) $\times$ $\mathbb{N}$ $\rightarrow$ (stilstaan\_duur') \\
+  verander\_stilstaan\_duur (stilstaan\_duur, nieuwe\_duur) = (stilstaan\_duur') \\
+  stilstaan\_duur' = stilstaan\_duur $\oplus$ (stilstaan\_duur, nieuwe\_duur)
+\end{enumerate}
+
+
+
+
+% section beweging (end)
+
+
+\subsection{Eten}\label{sub:eten} % (fold)
+eten = \{ (x) $|$ x $\in$ \emph{looppad} \} \newline
+
+Acties:
+\begin{enumerate}
+  \item verdwijn: $\mathbb{P}$(eten) $\times$ \emph{looppad} $\rightarrow$ $\mathbb{P}$(eten) \\
+  verdwijn (\emph{eten}, eten\_positie) = (\emph{eten}') \\
+  \emph{eten}' = \emph{eten} $\oplus$ (eten\_positie, $\emptyset$)
+<<<<<<< .mine
+\end{enumerate} 
+ \newline
+=======
+\end{enumerate}
+\ \\
+>>>>>>> .r469
+\begin{math}
+sushis \subseteq eten \\
+wasabis \subseteq eten \\
+sushis \cap wasabis = \emptyset
+\end{math}
+
+
+% subsection eten (end)
+
+
+
+\subsection{Bommen}\label{sec:bom} % (fold)
+bommen = \{ delay\_teller $|$ delay\_teller $\in \mathbb{N}$ \} \\
+$grote\_bommen \subseteq bommen$ \\
+$kleine\_bommen \subseteq bommen $
+
+$grote\_bommen \cap kleine\_bommen = \emptyset $
+
+
+Eigenschappen:
+\begin{enumerate}
+ \item delay\_teller $\in \mathbb{N}$
+\end{enumerate}
+Acties:
+\begin{enumerate}
+ \item verander\_delay\_teller: $\mathbb{N} \rightarrow \mathbb{N}$ \\
+       verander\_delay\_teller(delay\_teller) = (delay\_teller')  \\
+       delay\_teller' = delay\_teller $\oplus$ ( delay\_teller, $i$ ), met $i \in \mathbb{N}$ \\
+ \item verschijn: $(\mathbb{N} \times \mathbb{N}) \times \mathbb{P}(bommen) \rightarrow \mathbb{P}(bommen)$ \\
+       verschijn(taaru\_positie, $bommen$) = ($bommen'$) \\
+       $bommen' = bommen \oplus ( bommen, bommen \cup \{$taaru\_positie$\} )$ \\
+ \item verdwijn: $(\mathbb{N} \times \mathbb{N}) \times \mathbb{P}(bommen) \rightarrow \mathbb{P}(bommen)$ \\
+       verdwijn(bom\_positie, $bommen$) = ($bommen'$) \\
+       $bommen' = bommen \oplus ( $bom\_positie$, \emptyset )$ \\
+\end{enumerate}
+
+% section bom (end)

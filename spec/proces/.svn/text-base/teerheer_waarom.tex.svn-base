@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage[dutch]{babel}
+\usepackage{a4wide}
+
+\title{Waarom willen wij Teerheer als specificatieopdracht?}
+\author{OGO 1.1 Groep 1a, \\
+R. A. J. Berkeveld}
+\date{20 November 2006}
+
+\begin{document}
+
+\maketitle
+
+\section{Achtergrond}
+De opdracht Teerheer is een specificatieopdracht voor het OGO 1.1 project. Dit houd in een variant
+van Pacman te specificeren. De opdracht is ons bij voorbaat aangeleverd met de gedachte dat wij
+hier mee verder zouden gaan in het vervolg van het vak.
+
+Nu heeft het echter zo geschied dat ons eerste productdocument niet door de keuring kwam en wij dus
+moesten afzien van deze opdracht. Dit werd zelfs vervangen door een (nog onbekend) alternatief. Dit
+was geheel tegen onze verwachtingen in. Dit document dient ter overtuiging van het ons Teerheer als
+nog te laten specificeren, en wel grotendeels in de collegevrije week van dinsdag 2 t/m vrijdag 5
+Januari.
+
+\section{Praktische vordering}
+Op het moment hebben wij al een redelijk idee tot aanpak, de speelomgeving is al logisch geschapen
+maar dient nog daadwerkelijk gespecificeerd te worden. We hebben al idee\"{e}n tot het realiseren
+van animerende objecten, beweging, collisions, AI, IO en dergelijke. Dit zijn dan wel niet meer dan
+brainstorms, maar toch zeker wel implementeerbare gedachten.
+
+Ook zijn wij in beschikking van een (naar ons gelang) zeer creatieve naam voor de resulterende
+kloon: Taaru no Kami (Japans voor God van het Teer, ofwel Teerheer).
+
+Dit alles had geschied voordat wij te horen kregen dat we deze opdracht waarschijnlijk niet meer
+zouden doen. Vervolgens is dit uit vrees van tijdsverspilling ook niet meer in overweging genomen.
+Aldus tot nu, want nu is Productdocument 2 afgerond en zijn wij dus toe aan desbetreffende
+opdracht.
+
+\section{Andere redenen}
+\begin{itemize}
+\item Het uitvoeren van deze opdracht in bovengenoemde week zorgt dat wij dit niet in de
+zomervakantie hoeven in te halen.
+\item Bovendien zorgt deze oplossing ervoor dat we direct aan de slag kunnen, zonder eerst te hoeven
+wachten op een bekendmaking van de nieuwe opdracht. Dit zelfs al v\'{o}\'{o}r betreffende
+projecttijd in gaat. Dit bespaart ons tijd die wij in die enkele week tekort kunnen komen.
+\item Het bespaart de opdrachtgever natuurlijk ook het werk een nieuwe opdracht te schrijven.
+\end{itemize}
+
+\end{document}

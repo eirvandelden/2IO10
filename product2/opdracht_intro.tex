@@ -1,0 +1,30 @@
+%% De opdracht
+
+Een werkeenheid (denk aan een fabriek of een computerpark) verricht werkzaamheden en houdt daarvan een historie $\mathcal{L}$ (van logfile) bij. Eenvoudige eisen zijn:
+
+\begin{enumerate}
+    \item[\textbf{a}] De werkeenheid kan hoogstens A klussen tegelijk aan.
+    \item[\textbf{b}] Dezelfde klus kan niet meermalen tegelijk worden uitgevoerd.
+\end{enumerate}
+
+De logfile is een verzameling van zogenaamde klusuitvoeringen die de informatie over die
+uitvoeringen bevat, zoals de naam van de klus en de begin- en eindtijd van haar uitvoering. Die
+informatie kan verkregen worden door geschikte functies los te laten op de klusuitvoeringen:
+\begin{center}
+    $n : \mathcal{L} \rightarrow \mathcal{K}$ en $b,e : \mathcal{L} \rightarrow \mathbb{T} $
+\end{center}
+Waarbij het type $\mathcal{K}$ de collectie klussen vertegenwoordigt en $\mathbb{T}$ de tijd.
+Aanroepen van die functies zien er dus bijvoorbeeld uit als
+\begin{center}
+    $n(l) =$ plak, $b(l) =$ 481, $e(l) = 154 * \pi$
+\end{center}
+De klus plak is dus betrokken bij de uitvoering l en wel gedurende de tijd die gegeven wordt door
+het halfopen tijdsinterval $[481, 154 * \pi)$. Je zou kunnen besluiten te denken dat een
+klusuitvoering er dus uitziet als een drietal, maar dat is iets te eenvoudig. Zo'n klusuitvoering
+ziet er natuurlijk uit als een regel op een kleitablet met allemaal merkwaardige tekens, eenheden
+en vreselijk veel andere informatie er doorheen. De functies zijn informatie-extraherende
+machientjes, maar dat hoeven we allemaal niet te weten als we niet willen nadenken over de
+kleitabletimplementatie.
+\newline
+\newline
+\textbf{Opgave:}

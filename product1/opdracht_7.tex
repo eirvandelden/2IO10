@@ -1,0 +1,50 @@
+%% productdocument 1, opgave 7 (Voorbeeldje)
+
+\begin{enumerate}
+
+%%%%% Deelopgave 7.1 %%%%%
+\item Geef de betekenis van de volgende expressies weer als een Nederlandse zin \ldots
+\begin{enumerate}
+
+    \item $\{k \in V, l \in M, u\in U \: : \: v(u)=\{l\} \land w(u)=\{k\}\: : \: k \}$ \\
+        \emph{Antwoord:} ``Geef alle vrouwen die van een man gewonnen hebben.'' \\
+        \emph{Verbeterd antwoord:} ``Geef alle vrouwen die van een man gewonnen hebben in een enkelspel.'' \\
+        \emph{Redenering:} Er werd niet opgemerkt dat het een enkelspel betrof. \\
+
+    \item $(\exists_{k} \in\! V, l\in\! M, u \in\! U \: : \: k \in w(u) \land \:l \in v(u)\: : \: (\forall_{u'}\in U : \#w(u')=1 : l \notin v(u')))$ \\
+        \emph{Antwoord:} ``Voor alle uitslagen van mannen, die uiteindelijk verloren hebben van een vrouw.'' \\
+        \emph{Verbeterd antwoord:} ``Minstens 1 vrouw heeft in dubbelspel een man verslagen die in enkelspel alles gewonnen heeft, of geen enkelspel gespeeld heeft.'' \\
+        \emph{Redenering:} Het vorige antwoord zei niets nuttigs, aldus een compleet nieuwe interpretatie. \\
+
+    \item $(\forall_{k} \in V \: : \: : \: \#(P(k) \cap M) \leq 1)~\land~(\forall_{l} \in M \: : \: : \: \#(P(l) \cap V) \leq 1)$, waarbij\\
+            $~P(x) = (\cup \, u : x\in v(u) : v(u)) \cup (\cup \, u : x\in w(u) : w(u))$. \\
+        \emph{Antwoord:} ``Voor alle vrouwen en mannen die maximaal 1x gespeeld hebben.'' \\
+        \emph{Verbeterd antwoord:} ``Alle vrouwen en mannen hebben hoogstens eenmaal met iemand van het andere geslacht samengespeeld, waarbij ze hebben gewonnen of verloren.'' \\
+
+\end{enumerate}
+
+%%%%% Deelopgave 7.2 %%%%%
+\item Geef expressies voor \ldots
+\begin{enumerate}
+
+    \item Alle winnaars hebben ook ooit eens verloren. \\
+        %\emph{Antwoord:} $(\forall_{l} \in L, u \in U : l \in w(u) \wedge l \in v(u) : l)$\\
+        \emph{Antwoord:}  $(\forall l \in L, u, x \in U : l \in w(u) \wedge l \in v(x) : l)$\\
+        \emph{Verbeterd antwoord:} $(\forall l \in L, u, x \in U : l \in w(u) \wedge l \in v(x))$\\
+        %\emph{Verbeterd 2 antwoord:} $[\forall_{l} \in L, u \in U : w(u)=\{l\} \wedge \#{(v(u)=\{l\})\geq{1}}]$ \\
+        %\emph{Tijdelijk Antwoord:} $(\forall_{l} \in L, u, x \in U : l \in w(u) \wedge l \in v(x) : l)$ \\
+        %\emph{Redenering:} In de vraag wordt een stelling gegeven er is dus geen output, en de winnaars zijn uit een verzameling van leden geselecteerd waarvoor geldt dat elke winnaar minstens 1 keer verloren heeft. \\
+
+    \item De leden die  met de meeste andere leden samengespeeld hebben.\footnote{Deze opgave kan op meerdere wijzen worden opgevat. Wij hebben ervoor gekozen om deze opgave op te vatten als: ``… hoogste aantal (andere) leden hebben samengespeeld…''} \\
+        %\emph{Antwoord:} ${x \in L : (\uparrow y \in L (+ : xPy : 1)) = (\uparrow (a, b) \in L (+ : aPb : 1)) : x}$\\
+        \emph{Antwoord:} $\{x \in L : (\uparrow y \in L : : (+ : xPy : 1)) = (\uparrow a \in L (\uparrow b \in L : : (+ : aPb : 1))): x\}$ \\
+        \emph{Verbeterd Antwoord:} $\{x \in L : \#[y \in L : x P y] = (\uparrow a \in L : : \#[b \in L : a P b]) : x \}$ \\
+
+        \emph{Redenering:} Het totaalmaximum ging niet uit van maxima van specifieke partners, het telde alle partners en gaf dat als maximum. \\
+
+    \item De leden hebben niet aan partnerruil gedaan. \\
+        \emph{Antwoord:} $ \forall x [ x \in L :  (\# ~ y \in L: x P y) = 1] $ \\
+        \emph{Verbeterd antwoord:} $(\forall x \in L : (+ y \in L : xPy : 1) = 1)$\\
+
+\end{enumerate}
+\end{enumerate}

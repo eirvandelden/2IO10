@@ -1,0 +1,97 @@
+% Productdocument van OGO 1.1 goep 1a. Jaargang '06-'07, trimester 1.
+% Getiteld: ``Een sprong in Mathematische Hulpmiddelen''
+
+\documentclass[11pt]{report}
+
+%% Gebruikte pakketten
+\usepackage[dutch]{babel}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{textcomp}
+\usepackage[]{hyperref}
+\usepackage{fancyhdr}
+
+%% Documentinstellingen
+\geometry{letterpaper}
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % make space for the rule
+\fancypagestyle{plain} {
+    \fancyhead{} % get rid of headers on plain pages
+    \renewcommand{\headrulewidth}{0pt} % and the line
+}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%% Commando's (overgenomen uit Macrogo.tex)
+\newcommand{\cat}{+\!\!\!\!+\:}
+\newcommand{\inr}{< \!\!\!\!\!\! - \:}
+\newcommand{\oo}{{\scriptstyle{\:\circ}\:}}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{opg}[thm]{Opgave}
+\newcommand{\catt}{+\!\!\!+\:}
+
+%% Het Document
+\begin{document}
+
+\include{titelblad}
+
+\tableofcontents
+
+
+\chapter{Samenvatting}
+\input{samenvatting}
+
+
+\chapter{Inleiding}
+\input{inleiding}
+
+
+\chapter{De opgaven}
+
+\section{Rijtjes}
+\input{opdracht_1}
+
+\section{Verzamelingen}
+\input{opdracht_2}
+
+\section{Operaties}
+\input{opdracht_3}
+
+\section{Functies}
+\input{opdracht_4}
+
+\section{Expressies}
+\input{opdracht_5}
+
+\section{Predikaten}
+\input{opdracht_6}
+
+\section{Voorbeeldje}
+\input{opdracht_7}
+
+
+\chapter{Conclusie}
+\input{conclusie}
+
+
+\chapter{Begrippenlijst}
+\input{begrippenlijst}
+
+
+% De bibliografie
+\input{bibliografie}
+
+
+\end{document}

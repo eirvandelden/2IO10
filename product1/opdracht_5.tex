@@ -1,0 +1,46 @@
+%% productdocument 1, opgave 5 (Expressies)
+
+Laat $~arr~$ een rij van rijtjes en $~ars~$ een verzameling van rijtjes van gehele getallen zijn,
+en laat $~ar~$ een rijtje gehele getallen.
+
+\begin{enumerate}
+
+%%%%% Deelopgave 5.1 %%%%%
+\item Beschrijf wat de volgende expressies betekenen \ldots
+\begin{enumerate}
+
+    \item $[ar : ar \inr arr : (\uparrow a : a \inr ar : a)]$ \\
+        \emph{Antwoord:} ``Geef een rij met de maxima van ieder rijtje uit $arr$''.\\
+        \emph{Verbeterd antwoord:} ``Geef een rij met de maxima van ieder rijtje uit $arr$, volgens de volgorde van de rijtjes in $arr$''.\\
+        %\emph{Verbeterd antwoord:} ``Geef een aflopende rij met de maxima van ieder rijtje uit \emph{arr}, beginnend met het hoogste maximum''.\\
+        %\emph{Redenering:} Er was geen aanduiding in welke volgorde de maxima zouden komen te staan.\\
+
+    \item $(\downarrow p,q : 0\leq p < q < \#ar\;\land\; (+i : p\leq i < q : ar(i)) \geq 13 : q-p)$ \\
+        \emph{Antwoord:} ``Geef het minimaal aantal elementen dat nodig is om een som van aaneengesloten elementen uit ar te krijgen die minstens 13 is''.\\
+
+    \item $(+i : i \in rs : i) / \#rs$, waarbij $~rs=\{ar : ar \in ars : (+a : a \inr ar : a) \}$ \\
+        \emph{Aaname:} "$~ars~$ is niet leeg. Als dit het geval is, moet er door 0 gedeeld worden en dat kan niet." \\
+        \emph{Antwoord:} ``Het gemiddelde van alle rijtjes in de verzameling $ars$.''\\
+        \emph{Verbeterd antwoord:} ``Het gemiddelde van alle unieke sommen van alle rijtjes uit $ars$'' .\\
+        \emph{Redenering:} Het volgende werd vergeten: de som ($+i$...) en het ``unieke'': \emph{rs} is een verzameling en in een verzameling worden dubbelen
+        weggehaald. Ook is de aanname, dat $~ars~$ niet leeg is, toegevoegd.
+
+\end{enumerate}
+
+%%%%% Deelopgave 5.2 %%%%%
+\item Geef expressies voor de volgende waarden \ldots
+\begin{enumerate}
+
+    \item maximale lengte van enig segment (consecutieve deelrij) van $~ar~$ met louter nullen. \\
+        \emph{Antwoord:} \textbf{if} $\exists_{a}[a \inr ar: a = 0 ] \rightarrow (\uparrow p, q : 0 \leq p < q \leq \#ar \wedge \forall_{i} (i : p \leq i < q \wedge ar(i) = 0 ) : q - p )~ \Box ~ \neg \exists_{a} [a \inr ar: a= 0] \rightarrow 0 ~\textbf{fi}$ \\
+
+    \item vereniging van alle delers van alle rij-elementen van alle rij-elementen van $arr$. \\
+        \emph{Antwoord:} $\{\cup a, ar : a \inr ar, ar \inr arr : \{ d \in \mathbb{N} : d | a : d \} \}$ \\
+        \emph{Verbeterd antwoord:} $(\cup a, ar : a \inr ar \wedge ar \inr arr : \{ d \in \mathbb{N} : d | a : d \} )$ \\
+        \emph{Redenering:} Komma kan niet voorkomen als voorwaarde, buitenste acolades geven verzameling in verzameling. \\
+
+    \item gemiddelde rijsom van $~ars$. \\
+        \emph{Antwoord:} $(+~ar : ar \in ars : (+a : a \inr ar: a)) / \#ars$ \\
+
+\end{enumerate}
+\end{enumerate}

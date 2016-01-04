@@ -1,0 +1,10 @@
+Voor onze opdracht werd ons niet verplicht gesteld om de synthese volledig uit te werken. W\'el werd ons gevraagd om hierover na te denken. \\
+\\
+Ons lijkt het zeker mogelijk om de hele samenhang van het spel formeel te defineren in een flowchart. Dit werkt goed samen met de acties op objecten zoals wij
+die nu hebben geimplementeerd. \\
+\\
+Een voorbeeld zou een begin en einde bevatten waartussen een initialisatie voor het spel bevind, waarna een loop plaatsvindt waarin een initialisatie van
+het speelveld plaatsvindt, samen met het verdere verloop van het spel. Het einde bijvoorbeeld is dan direct gekoppelt aan de situatie waarin het aantal levens 0
+is en Taaru een leven verliest.
+
+%voorbeeld?

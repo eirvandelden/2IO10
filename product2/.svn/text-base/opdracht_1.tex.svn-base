@@ -1,0 +1,13 @@
+%% Heroefening ``Wat een werk'', Opdracht 1
+
+\item Hoeveel klusuitvoeringen waren er en hoeveel klussen waren daarbij betrokken? \\
+
+%\emph{Interpretatie:}  \\
+%\emph{Aanname:}  \\
+
+\emph{Antwoord:} Er waren $\# \mathcal{L}$ klusuitvoeringen en daar waren \\
+$ \# \{k \in \mathcal{K}, l \in \mathcal{L} : n(l) = k : k \}  $ klussen bij betrokken. \\
+%\emph{Assessment:}  \\
+
+%\emph{Verbeterd antwoord:}  \\
+%\emph{Redenering:}  \\

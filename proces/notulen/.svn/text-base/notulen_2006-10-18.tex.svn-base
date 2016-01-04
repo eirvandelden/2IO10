@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{a4paper}                   % ... or a4paper or a5paper or ...
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage[dutch]{babel}
+\usepackage{a4wide}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\title{Notulen d.d. 18-10-'06}
+\author{N. van der Veeken}
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+
+\maketitle
+
+\section{Opening}
+Edin is vandaag voorzitter, Nick is notulist. Het is de eerste
+vergadering na de tentamenweek en iedereen is aanwezig.\\
+\\
+Voor de komende weken is de planning van voorzitter en notulist als
+volgt:\\
+\\
+Van - Tot: Voorzitter, Notulist\\
+\\
+van 18-10-2006 tot 25-10-2006: Nick, Leroy\\
+van 25-10-2006 tot 01-11-2006: Leroy, Roy\\
+van 01-11-2006 tot 08-11-2006: Roy, Giso\\
+van 08-11-2006 tot 15-11-2006: Giso, Etienne\\
+van 15-11-2006 tot 22-11-2006: Etienne, Edin\\
+van 22-11-2006 tot 29-11-2006: Edin, Nick
+
+\section{Planning 20 oktober}
+Giso en Leroy: 1.1 c, 1.2 a, 3.1 b, 3.2 a\\
+Roy en Nick: 3.2 b, 3.2 c, 4.1 b, 4.1 c\\
+Etienne en Edin: 4.2 a, 4.2 b, 4.2 c, 5.2 b\\
+
+\section{Planning 25 oktober}
+Giso en Leroy: 6.2 b, 6.2 c\\
+Roy en Nick: 7.1 b, 7.1 c\\
+Etienne en Edin: 7.2 a, 7.2 b, 7.2 c\\
+
+\end{document}

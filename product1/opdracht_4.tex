@@ -1,0 +1,63 @@
+%% productdocument 1, opgave 4 (Functies)
+
+\begin{enumerate}
+
+%%%%% Deelopgave 4.1 %%%%%
+\item Beschrijf wat de volgende functies berekenen \ldots
+\begin{enumerate}
+
+    \item $f: \mathbb{L}(A) \times \mathbb{L}(A)\rightarrow \mathbb{L}(\mathbb{L}(A))~$ gegeven door \[f((ar,br))=[i : 0\leq i < \#ar\downarrow\#br : [ar(i),br(i)]]\] \\
+        % \emph{Antwoord:} ``Geef \emph{i} weer uit de rijen \emph{ar} en \emph{br}, met \emph{i} groter of gelijk aan 0 en kleiner dan de kortste rijlengte (\# ar $\downarrow$ \# br)''. \\
+        % \emph{Verbeterd Antwoord:} ``Geef paartjes van $ar(i)$ en $br(i)$ tot alle elementen van de kortste rij zijn doorgelopen'' \\
+        % \emph{Redenering:} Verkeerd idee van de functie van \emph{i}.\\
+        \emph{Antwoord:} ``Geef paartjes van $ar(i)$ en $br(i)$ tot alle elementen van de kortste rij zijn doorgelopen'' \\
+        \emph{Verbeterd Antwoord:} ``Geef tupels bestaande uit $ar(i)$ en $br(i)$ tot alle elementen van de kortste rij zijn doorgelopen.'' \\
+        \emph{Redenering:} Het gebruik van 'paartjes' was onduidelijk. \\
+
+    \item $g:\mathbb{L}(\mathbb{L}(A))\rightarrow\mathbb{L}(A)~$ gegeven door \begin{math} g([ ]) = [ ],~~~g([a])=a~~ \end{math}en \begin{math} ~~g(ar \cat br)=g(ar) \cat g(br) \end{math}  \\
+        %orig 1: \emph{Antwoord:} ``Haal een enkel element uit de rij''. \\
+        %orig 1: \emph{Verbeterd antwoord}:``Geef A''. \\
+        %orig 1: \emph{Redenering:} Het gaat niet om het terug geven van \'e\'en element, maar om alle elementen. \\
+        \emph{Antwoord:} ``Geef A''. \\
+        \emph{Verbeterd antwoord:} ``Geef de catenatie van alle rijtjes in $A$, recursief.'' \\
+
+    \item $g \oo f~$ met $~f,g~$ als hierboven. \\
+        %orig 1: \emph{Antwoord:} ``Geef de losse elementen van 2 lijsten, waarbij de \emph{n}-de van \emph{ar} gepaard staat met de \emph{n}-de van \emph{br} tot er geen elementen meer zijn voor een van die rijen''\\
+        %orig 1: \emph{Verbeterd antwoord:} ``Geef \emph{ar(i)}, \emph{br(i)}'' \\
+        %orig 1: \emph{Redenering:} Sectie 3.4 Opgave 1b was verkeerd gemaakt, waardoor deze ook verkeerd was. \\
+        \emph{Antwoord:} ``Geef $ar(i)$, $br(i)$'' \\
+        \emph{Verbeterd antwoord:} ``Geef het ritsresultaat van $ar$ en $br$ tot alle elementen van de korste rij zijn doorlopen.'' \\
+
+\end{enumerate}
+
+%%%%% Deelopgave 4.2 %%%%%
+\item Geef definities van functies die het volgende berekenen \ldots
+\begin{enumerate}
+
+    \item de verzameling grootouders van mensen (gegeven de ouder relatie $~O$). \\
+        \emph{Antwoord:} $f(mens) :  \rightarrow \mathbb{P}(mens)$, gegeven door: \\
+            $f(y)=\{x: x$O;O:$y: x\}$ \\
+            \emph{Verbeterd antwoord:} $f : mens  \rightarrow \mathbb{P}(mens)$,
+gegeven door: \\
+$f(mens)=\{x: x$O;O$y: x\}$ \\
+                \emph{Redenering:} Het oude domein was leeg, maar er was wel een co-domein. De expressie was in vierstukken verdeeld, ip. de gebruikelijke drie-deling.\\
+
+    \item de som van alle delers van een natuurlijk getal. \\
+        \emph{Antwoord:} $f: \mathbb{N} \rightarrow \mathbb{N}$, gegeven door: \\
+            $f(n) = (+ (x, n) \in \mathbb{N} : x | n : x )$ \\
+       \emph{Verbeterd antwoord:} $f: \mathbb{N} \rightarrow \mathbb{N}$, gegeven door: \\
+$f(y) = (+~ x \in \mathbb{N} : x | y : x )$ \\
+                \emph{Redenering:} De originele variabele en de dummy hadden dezelfde naam.
+
+
+    \item eindige machtreeksen van een gegeven getal $z$, informeel: $f(n)= z^{0} + ... +  z^{n}$. \\
+        \emph{Antwoord:} $f: \mathbb{N} \times \mathbb{Z} \rightarrow \mathbb{Z}$, gegeven door:\\
+            $f(n, z) = ( + (n, z) \in \mathbb{N} \times \mathbb{Z} : : z^{n} )$ \\
+        %\emph{Tijdelijke antwoord:} $f: \mathbb{R} \times \mathbb{N} \rightarrow \mathbb{L}(a)  $, gegeven door: \\
+        %    $f(z) = ( \catt n : \textbf{True}: z^{n} ) $ \\
+        \emph{Verbeterd Antwoord:} $f: \mathbb{N} \rightarrow \mathbb{R}$, gegeven door:\\
+            $f(n) = (+ i \in \mathbb{N} : i \leq n : z^i )$ \\
+
+
+\end{enumerate}
+\end{enumerate}

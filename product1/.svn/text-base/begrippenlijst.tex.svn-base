@@ -1,0 +1,85 @@
+%% De begrippenlijst (tekens, verzamelingen, woorden en functies
+
+\section{Tekens}
+\begin{description}
+    \item[$\in$]{element van}
+    \item[$\vee$]{of}
+    \item[$\wedge$]{en}
+    \item[$\equiv$]{equivalent}
+    \item[$\#$ ]{aantal}
+    \item[$\exists$]{er is}
+    \item[$\forall$]{voor alle}
+    \item[$\emptyset$]{lege verzameling}
+    \item[$\neg$]{negatie}
+    \item[$\uparrow$]{maximum}
+    \item[$\downarrow$]{minimum}
+    \item[$\subseteq$]{bevat in}
+    \item[$\circ$]{compositie}
+    \item[$\cup$]{vereniging}
+    \item[$\cap$]{doorsnede}
+    \item[$\setminus$]{verschil}
+    \item[$\times$]{cartesisch product}
+    \item[$\inr$]{bewoner van}
+    \item[$\catt$]{catenatie}
+    \item[$\Delta$]{identiteitsrelatie}
+\end{description}
+
+
+\section{Verzamelingen}
+\begin{description}
+    \item[$\mathbb{L}$]{lijst} \\
+    \item[$\mathbb{P}$]{machtsverzameling} \\
+    \item[$\mathbb{F}$]{eindige verzameling} \\
+    \item[$\mathbb{R}$]{de standaard verzamelingen ree\"ele getallen} \\
+    \item[$\mathbb{Z}$]{de standaard verzamelingen gehele getallen} \\
+    \item[$\mathbb{B}$]{de standaard verzamelingen boolse getallen} \\
+    \item[$\mathbb{N}$]{de standaard verzamelingen natuurlijke getallen} \\
+\end{description}
+
+
+\section{Woorden}
+\begin{description}
+    \item[Bulktypen]{Verzamelingen en rijtjes zijn zogenaamde bulktypen, waarin van een gegeven basistype meerdere exemplaren bijeengegaard zijn}
+    \item[Verzamelingen]{Verzamelingen zijn bulks met van elk ding ten hoogste 1 exemplaar}
+    \item[Rijtjes]{Rijtjes zijn bulks die per ding meerdere exemplaren mogen hebben, waarbij de volgorde belangrijk is}
+    \item[Catenatie]{Het aaneenritsen van twee rijtjes}
+    \item[Comprehensie]{Selectie en functietoepassing op de bewoners van die rijtjes gebruiken om de nieuwe rij-bewoners te beschrijven}
+    \item[Dummies]{Hulpvariabelen}
+    \item[Vereniging]{Catenatie van verzamelingen}
+    \item[Compositie]{Het toepassen van een bepaalde functie op een argument}
+    \item[Quantificatie]{Het beschrijven van een formule door middel van quantoren $\forall$ en $\exists$}
+    \item[Quantor]{Een expressie die het domein van een bepaalde term waaraan het vastzit weer geeft}
+    \item[Relaties]{Een verzameling van tupels, rijtjes van elementen, ieder uit een van de verzamelingen waarop de relatie gedefinieerd is.}
+    \item[Expressies]{Een collectie van symbolen die samenvoegend een quantiteit beschrijven}
+    \item[Functies]{Een relatie of expressie dat een of meer variabelen betrekt}
+    \item[Predikaten]{$\mathbb{B}$-waardige functies}
+    \item[Existenti\"ele quantificatie]{Quantificatie waarbij geldt: ``Er bestaat een x die aan P voldoet zo, dat daarvoor Q waar is.''}
+    \item[Universele quantificatie]{Quantificatie waarbij geldt: ``Voor alle x waarvoor P waar is, is Q waar.''}
+    \item[Propositie]{Een predikaat zonder variabelen}
+    \item[Variabele]{Argumenten van een $\mathbb{B}$-waardige functie}
+    \item[Consecutieve rij]{Een aaneengesloten rij}
+    \item[Tupel]{groepering van variabelen}
+\end{description}
+
+
+\section{Functies}
+\begin{description}
+\label{sec:functies}
+    \item[$succ$]{geeft de opvolger} \\
+    \item[\lbrack$\cdot $ \rbrack]{geeft een rij aan} \\
+    \item[\lbrack \rbrack]{een lege rij}
+    \item[$\pi_{2}$]{$2^{de}$ in een tupel} \\
+    \item[$fib$]{rij van Fibonacci} \\
+    \item[$avg$]{gemiddelde van een lijst} \\
+    \item[$0^{\bullet}$]{altijd nul} \\
+    \item[$dkr$]{dubbel kwadraten rij} \\
+    \item[$rev$]{keer een rij om} \\
+    \item[$dkv$]{dubbel kwadraten verzameling} \\
+    \item[$set$]{de verzameling gemaakt uit een gegeven rij} \\
+    \item[$seg$]{geeft alle consecutieve deelrijen uit de opgegeven rij. \\
+        Met $seg : \mathbb{L}(A) \rightarrow \mathbb{P}(\mathbb{L}(A))$, gegeven door \\
+        $\{p, q : 0 \leq p < q < \#W : [i : p \leq i \leq q : W(i)]\} $ }\\
+    \item[$palindroom$] {boolse functie die controleert op het zijn van een palindroom. \\
+        Met $palindroom : \mathbb{L}(A) \rightarrow \mathbb{B}$, gegeven door \\
+        $\forall_{i} [i \in \mathbb{N} : 0  \leq i \leq (\#ar / 2) - 1 \wedge W(i) = W(\# W - i - 1)] ]$} \\
+\end{description}
